@@ -1,7 +1,9 @@
-package ir.elegam.school;
+package ir.elegam.school.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import ir.elegam.school.R;
 
 public class MainActivity extends AppCompatActivity {
 
