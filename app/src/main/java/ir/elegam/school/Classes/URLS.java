@@ -1,12 +1,9 @@
 package ir.elegam.school.Classes;
 
-/**
- * Created by Amoozesh on 7/13/2016.
- */
 public class URLS {
 
-    public static String web_services="";
+    public static final String DOMAIN ="";
+    public static final String WEB_SERVICE_URL = DOMAIN + "";
 
-    public static String login=web_services+"";
 
 }
