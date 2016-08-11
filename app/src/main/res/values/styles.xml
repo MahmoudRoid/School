@@ -44,15 +44,6 @@
     </style>
     -->
 
-    <style
-        name="MySpinner">
-        <item name="android:gravity">right</item>
-        <item name="android:textColor">@color/TXTcolor</item>
-        <item name="android:lineSpacingExtra">5dp</item>
-        <item name="android:background">@color/pri100</item>
-        <item name="android:paddingRight">15dp</item>
-        <item name="android:textSize">17dp</item>
-    </style>
 
     <style
         name="TextLabel"

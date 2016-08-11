@@ -23,6 +23,7 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 //Do something after 100ms
                 startActivity(new Intent(SplashActivity.this,LoginActivity.class));
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
             }
         }, 1500);
 

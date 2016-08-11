@@ -71,4 +71,10 @@ public class LoginActivity extends AppCompatActivity implements IWebservice{
         snackbar.show();
     }
 
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        // todo : add exit diolog
+    }
 }
