@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+
+    <color name="pri700">#6C1416</color>
+    <color name="pri500">#7F1416</color>
+    <color name="appBarAlpha">#227F1416</color>
+    <color name="pri100">#FFCDD2</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="FABcolor">#ddc164</color>
+    <color name="CC">#60ddc164</color>
+    <color name="TXTcolor">#12385E</color>
+	<color name="secColor">#3E2723</color>
+
+    <color name="Myred">#950707</color>
+    <color name="Mygreen">#1B5E20</color>
+    <color name="Mylight">#eabd8f</color>
+    <color name="splashCo">#a39d93</color>
+    <color name="Tire">#504435</color>
+    <color name="Mygold">#BF360C</color>
+
+    <color name="mdtp_accent_color">#7F1416</color>
+    <color name="mdtp_accent_color_dark">#7F1416</color>
+
 </resources>
