@@ -7,4 +7,6 @@ public class URLS {
 
     public static String web_services="";
 
+    public static String login=web_services+"";
+
 }
