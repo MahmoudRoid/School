@@ -25,7 +25,7 @@ public class Login extends AsyncTask<String,Void,String> {
 
     public Context context;
     private IWebservice delegate = null;
-    public String username,password,url;
+    public String username,password;
 
    // SweetAlertDialog pDialog ;
 
@@ -34,7 +34,6 @@ public class Login extends AsyncTask<String,Void,String> {
         this.delegate=delegate;
         this.username=username;
         this.password=password;
-        this.url= URLS.login;
 
       //  pDialog = new SweetAlertDialog(context, SweetAlertDialog.PROGRESS_TYPE);
     }
@@ -61,7 +60,7 @@ public class Login extends AsyncTask<String,Void,String> {
                         .add("password",password)
                         .build();
                 Request request = new Request.Builder()
-                        .url(this.url)
+                        .url(URLS.WEB_SERVICE_URL)
                         .post(body)
                         .build();
 
