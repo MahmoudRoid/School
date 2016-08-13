@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!--<item
-        android:id="@+id/share"
-        android:icon="@drawable/ic_share_grey_600_24dp"
-        android:title="Share" />
+    <item
+        android:id="@+id/action_linkedIn"
+        android:icon="@drawable/linkedin"
+        android:title="@string/menu_linkedin" />
 
     <item
-        android:id="@+id/upload"
-        android:icon="@drawable/ic_cloud_upload_grey_600_24dp"
-        android:title="Upload" />
+        android:id="@+id/action_instagram"
+        android:icon="@drawable/instagram"
+        android:title="@string/menu_instagram" />
 
     <item
-        android:id="@+id/copy"
-        android:icon="@drawable/ic_content_copy_grey_600_24dp"
-        android:title="Copy" />
+        android:id="@+id/action_googleplus"
+        android:icon="@drawable/googleplus"
+        android:title="@string/menu_googleplus" />
 
     <item
-        android:id="@+id/print"
-        android:icon="@drawable/ic_print_grey_600_24dp"
-        android:title="Print" />-->
+        android:id="@+id/action_website"
+        android:icon="@drawable/website"
+        android:title="@string/menu_website" />
+
+    <item
+        android:id="@+id/action_exit"
+        android:icon="@drawable/settings_power_black"
+        android:title="@string/menu_exit" />
 
 </menu>

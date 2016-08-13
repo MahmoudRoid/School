@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/coordinate_profile">
+    android:layout_height="wrap_content"
+    android:id="@+id/coordinate_profile"
+    tools:context="ir.elegam.school.Activity.ProfileActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -74,6 +75,7 @@
                 android:layout_margin="5dp">
 
                 <LinearLayout
+                    android:id="@+id/lay1_profile"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -102,6 +104,7 @@
                 android:layout_margin="5dp">
 
                 <LinearLayout
+                    android:id="@+id/lay2_profile"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -137,6 +140,7 @@
                     android:layout_weight="1">
 
                     <LinearLayout
+                        android:id="@+id/lay3_profile"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -166,6 +170,7 @@
                     android:layout_margin="5dp">
 
                     <LinearLayout
+                        android:id="@+id/lay4_profile"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -203,6 +208,7 @@
                     android:layout_weight="1">
 
                     <LinearLayout
+                        android:id="@+id/lay5_profile"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -232,6 +238,7 @@
                     android:layout_margin="5dp">
 
                     <LinearLayout
+                        android:id="@+id/lay6_profile"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -269,6 +276,7 @@
                     android:layout_weight="1">
 
                     <LinearLayout
+                        android:id="@+id/lay7_profile"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -298,6 +306,7 @@
                     android:layout_margin="5dp">
 
                     <LinearLayout
+                        android:id="@+id/lay8_profile"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -336,6 +345,7 @@
                     android:layout_weight="1">
 
                     <LinearLayout
+                        android:id="@+id/lay9_profile"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -365,6 +375,7 @@
                     android:layout_margin="5dp">
 
                     <LinearLayout
+                        android:id="@+id/lay10_profile"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -389,4 +400,16 @@
 
         </LinearLayout>
     </ScrollView>
-</android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        card_view:fabSize="normal"
+        android:src="@android:drawable/ic_menu_add"/>
+
+</FrameLayout>
