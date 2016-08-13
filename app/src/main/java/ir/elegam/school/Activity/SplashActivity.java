@@ -1,6 +1,7 @@
 package ir.elegam.school.Activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,28 +16,27 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        cheknetstatus();
+
+
+        SharedPreferences prefs = getSharedPreferences("school_shared", MODE_PRIVATE);
+        final boolean has_login = prefs.getBoolean("has_login",false);
+
 
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                //Do something after 100ms
-                startActivity(new Intent(SplashActivity.this,LoginActivity.class));
-                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+
+                if(has_login){
+                    startActivity(new Intent(SplashActivity.this,ProfileActivity.class));
+                    overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+                }
+                else {
+                    startActivity(new Intent(SplashActivity.this,LoginActivity.class));
+                    overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+                }
             }
         }, 1500);
-
-
     }
 
-    private void cheknetstatus() {
-        MyApplication myApplication=(MyApplication)getApplicationContext();
-        if(Internet.isNetworkAvailable(SplashActivity.this)){
-            myApplication.isNetworkconnected=true;
-        }
-        else {
-            myApplication.isNetworkconnected = false;
-        }
-    }
 }
