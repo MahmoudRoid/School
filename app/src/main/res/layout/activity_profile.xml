@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/coordinate_profile">
@@ -13,6 +15,377 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200sp"
+                    android:background="@color/V_Sormeii"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:lineSpacingExtra="@dimen/_8sdp"
+                        android:textSize="20sp"
+                        android:text="امیرحسین مدرس \n کد دانش آموزی : 880322450\n مقطع تحصیلی : سوم دبیرستان \n کلاس : سوم پ"/>
+
+                    <ImageView
+                        android:layout_width="100sp"
+                        android:layout_height="100sp"
+                        android:id="@+id/imageView"
+                        android:src="@drawable/axe"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="سخن بزرگان"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="@color/V_Blue"
+                android:padding="10dp"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:padding="5sp">
+
+                    <ImageView
+                        android:layout_width="60sp"
+                        android:layout_height="60sp"
+                        android:src="@drawable/hozoorqiab"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="حضور و غیاب"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="@color/V_Red"
+                android:padding="10dp"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:padding="5sp">
+
+                    <ImageView
+                        android:layout_width="60sp"
+                        android:layout_height="60sp"
+                        android:src="@drawable/icon_moshaveretahsili"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="مشاوره تحصیلی و تربیتی"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    card_view:cardBackgroundColor="@color/V_Yellow"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:padding="5sp">
+
+                        <ImageView
+                            android:layout_width="60sp"
+                            android:layout_height="60sp"
+                            android:src="@drawable/icon_elanat"/>
+
+                        <TextView
+                            android:layout_width="100sp"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="اعلانات و اطلاعیه ها"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    android:layout_weight="1"
+                    card_view:cardBackgroundColor="@color/V_Violet"
+                    android:padding="10dp"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:padding="5sp">
+
+                        <ImageView
+                            android:layout_width="60sp"
+                            android:layout_height="60sp"
+                            android:src="@drawable/icon_etelatetahsili"/>
+
+                        <TextView
+                            android:layout_width="100sp"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="اطلاعات تحصیلی"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    card_view:cardBackgroundColor="@color/V_Pink"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:padding="5sp">
+
+                        <ImageView
+                            android:layout_width="60sp"
+                            android:layout_height="60sp"
+                            android:src="@drawable/icon_akhbar"/>
+
+                        <TextView
+                            android:layout_width="100sp"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:text="اخبار"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    android:layout_weight="1"
+                    card_view:cardBackgroundColor="@color/V_Green"
+                    android:padding="10dp"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:padding="5sp">
+
+                        <ImageView
+                            android:layout_width="60sp"
+                            android:layout_height="60sp"
+                            android:src="@drawable/icon_eftekharat"/>
+
+                        <TextView
+                            android:layout_width="100sp"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:text="سخن بزرگان"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    card_view:cardBackgroundColor="@color/V_Orange"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:padding="5sp">
+
+                        <ImageView
+                            android:layout_width="60sp"
+                            android:layout_height="60sp"
+                            android:src="@drawable/icon_ashnayibamajmooee"/>
+
+                        <TextView
+                            android:layout_width="100sp"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="آشنایی با مجموعه"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    android:layout_weight="1"
+                    card_view:cardBackgroundColor="@color/V_Sorkhabi"
+                    android:padding="10dp"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:padding="5sp">
+
+                        <ImageView
+                            android:layout_width="60sp"
+                            android:layout_height="60sp"
+                            android:src="@drawable/icon_gallarytasavir"/>
+
+                        <TextView
+                            android:layout_width="100sp"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:text="گالری تصاویر"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    card_view:cardBackgroundColor="@color/V_Cyan"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:padding="5sp">
+
+                        <ImageView
+                            android:layout_width="60sp"
+                            android:layout_height="60sp"
+                            android:src="@drawable/icon_ertebatbamajmoee"/>
+
+                        <TextView
+                            android:layout_width="100sp"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="ارتباط با مجموعه"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    android:layout_weight="1"
+                    card_view:cardBackgroundColor="@color/V_VioPink"
+                    android:padding="10dp"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:padding="5sp">
+
+                        <ImageView
+                            android:layout_width="60sp"
+                            android:layout_height="60sp"
+                            android:src="@drawable/icon_mali"/>
+
+                        <TextView
+                            android:layout_width="100sp"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:text="امور مالی"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
