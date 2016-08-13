@@ -1,6 +1,6 @@
 package ir.elegam.school.Activity;
 
-import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kennyc.bottomsheet.BottomSheet;
@@ -22,6 +23,8 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
 
     private FloatingActionButton fab;
     private LinearLayout lay1,lay2,lay3,lay4,lay5,lay6,lay7,lay8,lay9,lay10;
+    private TextView txt1,txt2,txt3,txt4,txt5,txt6,txt7,txt8,txt9,txt10,txtSentences,txtStudent;
+    private Typeface San;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
     }// end onCreate()
 
     private void define(){
+        San = Typeface.createFromAsset(getAssets(), "fonts/SansLight.ttf");
         fab = (FloatingActionButton) findViewById(R.id.fab_profile);
         lay1 = (LinearLayout) findViewById(R.id.lay1_profile);
         lay2 = (LinearLayout) findViewById(R.id.lay2_profile);
@@ -45,6 +49,32 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
         lay8 = (LinearLayout) findViewById(R.id.lay8_profile);
         lay9 = (LinearLayout) findViewById(R.id.lay9_profile);
         lay10 = (LinearLayout) findViewById(R.id.lay10_profile);
+        txt1 = (TextView) findViewById(R.id.txt1_profile);
+        txt2 = (TextView) findViewById(R.id.txt2_profile);
+        txt3 = (TextView) findViewById(R.id.txt3_profile);
+        txt4 = (TextView) findViewById(R.id.txt4_profile);
+        txt5 = (TextView) findViewById(R.id.txt5__profile);
+        txt6 = (TextView) findViewById(R.id.txt6__profile);
+        txt7 = (TextView) findViewById(R.id.txt7__profile);
+        txt8 = (TextView) findViewById(R.id.txt8_profile);
+        txt9 = (TextView) findViewById(R.id.txt9_profile);
+        txt10 = (TextView) findViewById(R.id.txt10_profile);
+        txtSentences = (TextView) findViewById(R.id.txtSentences_profile);
+        txtStudent = (TextView) findViewById(R.id.txtStudent_profile);
+
+        txt1.setTypeface(San);
+        txt2.setTypeface(San);
+        txt3.setTypeface(San);
+        txt4.setTypeface(San);
+        txt5.setTypeface(San);
+        txt6.setTypeface(San);
+        txt7.setTypeface(San);
+        txt8.setTypeface(San);
+        txt9.setTypeface(San);
+        txt10.setTypeface(San);
+        txtSentences.setTypeface(San);
+        txtStudent.setTypeface(San);
+
     }// end define()
 
     private void OnClickLoader(){

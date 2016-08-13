@@ -8,4 +8,20 @@
     <string name="menu_googleplus">Google +</string>
     <string name="menu_website">Website</string>
     <string name="menu_exit">خروج</string>
+    <string name="menu_favorite">علاقمندی ها</string>
+
+    <string name="error_invalid">معتبر نیست!</string>
+    <string name="error_length">تعداد کاراکترها نامعتبر است.</string>
+    <string name="error_empty">خالیست!</string>
+    <string name="error_different">عدم تطابق!</string>
+    <string name="error_internet">لطفا دستگاه خود را به اینترنت متصل کنید!</string>
+    <string name="error_server">خطا از سرور! لطفا بعدا مجددا تلاش کنید.</string>
+    <string name="error_permission">
+        در صورت نپذیرفتن دسترسی شما نمیتوانید از برنامه استفاده کنید!! \n\n
+        لطفا در تنظیمات گوشی قسمت دسترسی ها آن را فعال نمایید.
+    </string>
+    <string name="error_nework">تلاش برای اتصال به اینترنت</string>
+    <string name="error_empty_list">لیست علاقمندی های شما خالیست!</string>
+    <string name="title_activity_mosque">Map</string>
+
 </resources>

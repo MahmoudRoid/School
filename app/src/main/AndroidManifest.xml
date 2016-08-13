@@ -33,6 +33,18 @@
             android:name=".Activity.LoginActivity"
             android:label=""
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.NewsActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.FavoriteActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ContextActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

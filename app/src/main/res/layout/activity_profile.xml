@@ -35,7 +35,8 @@
                         android:textColor="@color/white"
                         android:lineSpacingExtra="@dimen/_8sdp"
                         android:textSize="20sp"
-                        android:text="امیرحسین مدرس \n کد دانش آموزی : 880322450\n مقطع تحصیلی : سوم دبیرستان \n کلاس : سوم پ"/>
+                        android:text="امیرحسین مدرس \n کد دانش آموزی : 880322450\n مقطع تحصیلی : سوم دبیرستان \n کلاس : سوم پ"
+                        android:id="@+id/txtStudent_profile" />
 
                     <ImageView
                         android:layout_width="100sp"
@@ -63,7 +64,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
-                        android:text="سخن بزرگان"/>
+                        android:text="سخن بزرگان"
+                        android:id="@+id/txtSentences_profile" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -92,7 +94,8 @@
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
                         android:text="حضور و غیاب"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:id="@+id/txt1_profile" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -121,7 +124,8 @@
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
                         android:text="مشاوره تحصیلی و تربیتی"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:id="@+id/txt2_profile" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -157,7 +161,8 @@
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:text="اعلانات و اطلاعیه ها"
-                            android:textColor="@color/white"/>
+                            android:textColor="@color/white"
+                            android:id="@+id/txt3_profile" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -187,7 +192,8 @@
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:text="اطلاعات تحصیلی"
-                            android:textColor="@color/white"/>
+                            android:textColor="@color/white"
+                            android:id="@+id/txt4_profile" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -225,7 +231,8 @@
                             android:layout_height="wrap_content"
                             android:textSize="20sp"
                             android:text="اخبار"
-                            android:textColor="@color/white"/>
+                            android:textColor="@color/white"
+                            android:id="@+id/txt5__profile" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -255,7 +262,8 @@
                             android:layout_height="wrap_content"
                             android:textSize="20sp"
                             android:text="سخن بزرگان"
-                            android:textColor="@color/white"/>
+                            android:textColor="@color/white"
+                            android:id="@+id/txt6__profile" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -293,7 +301,8 @@
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:text="آشنایی با مجموعه"
-                            android:textColor="@color/white"/>
+                            android:textColor="@color/white"
+                            android:id="@+id/txt7__profile" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -323,7 +332,8 @@
                             android:layout_height="wrap_content"
                             android:textSize="20sp"
                             android:text="گالری تصاویر"
-                            android:textColor="@color/white"/>
+                            android:textColor="@color/white"
+                            android:id="@+id/txt8_profile" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -334,7 +344,7 @@
                 android:layout_height="100sp"
                 android:layout_weight="1"
                 android:orientation="horizontal"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="100dp">
 
                 <android.support.v7.widget.CardView
                     android:layout_width="wrap_content"
@@ -362,7 +372,8 @@
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:text="ارتباط با مجموعه"
-                            android:textColor="@color/white"/>
+                            android:textColor="@color/white"
+                            android:id="@+id/txt9_profile" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -392,7 +403,8 @@
                             android:layout_height="wrap_content"
                             android:textSize="20sp"
                             android:text="امور مالی"
-                            android:textColor="@color/white"/>
+                            android:textColor="@color/white"
+                            android:id="@+id/txt10_profile" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
