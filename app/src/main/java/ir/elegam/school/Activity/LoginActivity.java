@@ -70,8 +70,6 @@ public class LoginActivity extends AppCompatActivity implements IWebservice{
         SharedPreferences.Editor editor = getSharedPreferences("school_shared", MODE_PRIVATE).edit();
         editor.putBoolean("has_login",true);
         editor.commit();
-
-
     }
 
     @Override
