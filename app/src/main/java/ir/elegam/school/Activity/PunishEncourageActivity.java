@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import ir.elegam.school.Adapter.ViewPagerAdapter;
 import ir.elegam.school.AsyncTask.GetPunishEncourage;
 import ir.elegam.school.Classes.Internet;
-import ir.elegam.school.Fragment.Encourageragment;
+import ir.elegam.school.Fragment.EncourageFragment;
 import ir.elegam.school.Fragment.PunishFragment;
 import ir.elegam.school.Helper.PunishEncourage;
 import ir.elegam.school.Interface.IWebservice2;
@@ -89,7 +89,7 @@ public class PunishEncourageActivity extends AppCompatActivity implements IWebse
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
         adapter.addFragment(new PunishFragment(), "تنبیه");
-        adapter.addFragment(new Encourageragment(), "تشویق");
+        adapter.addFragment(new EncourageFragment(), "تشویق");
         viewPager.setAdapter(adapter);
     }
 

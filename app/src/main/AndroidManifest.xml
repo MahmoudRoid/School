@@ -72,7 +72,8 @@
             android:label=""
             android:screenOrientation="landscape" />
         <activity android:name=".Activity.ImageCategoryActivity" />
-        <activity android:name=".Activity.ImagesDetailActivity"></activity>
+        <activity android:name=".Activity.ImagesDetailActivity" />
+        <activity android:name=".Activity.ArticleActivity"></activity>
     </application>
 
 </manifest>

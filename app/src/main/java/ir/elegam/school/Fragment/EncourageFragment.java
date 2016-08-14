@@ -19,14 +19,14 @@ import ir.elegam.school.R;
 /**
  * Created by Droid on 8/14/2016.
  */
-public class Encourageragment extends Fragment {
+public class EncourageFragment extends Fragment {
 
     ArrayList<PunishEncourage> encourage_arraylist;
     private RecyclerView mRecyclerView;
     private PunishEncourageAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
-    public Encourageragment() {
+    public EncourageFragment() {
         // Required empty public constructor
     }
 

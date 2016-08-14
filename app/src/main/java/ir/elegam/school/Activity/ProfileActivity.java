@@ -2,6 +2,7 @@ package ir.elegam.school.Activity;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +17,8 @@ import android.widget.Toast;
 
 import com.kennyc.bottomsheet.BottomSheet;
 import com.kennyc.bottomsheet.BottomSheetListener;
+
+import java.io.File;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import ir.elegam.school.Classes.Variables;
@@ -39,6 +42,7 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
     }// end onCreate()
 
     private void define(){
+        MakeRoots();
         San = Typeface.createFromAsset(getAssets(), "fonts/SansLight.ttf");
         fab = (FloatingActionButton) findViewById(R.id.fab_profile);
         lay1 = (LinearLayout) findViewById(R.id.lay1_profile);
@@ -248,5 +252,19 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
                 })
                 .show();
     }
+
+    private void MakeRoots(){
+        File root = new File(Environment.getExternalStorageDirectory(),"SCHOOL");
+        File Fimage = new File(Variables.ROOT,"images");
+        File Fvideo = new File(Variables.ROOT,"videos");
+        File Fpdf = new File(Variables.ROOT,"PDFs");
+        if(!root.exists())
+        {
+            root.   mkdir();
+            Fimage. mkdir();
+            Fvideo. mkdir();
+            Fpdf.   mkdir();
+        }
+    }// end MakeRoots()
 
 }// end class
