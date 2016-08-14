@@ -1,4 +1,4 @@
-package ir.elegam.school.Classes;
+package ir.elegam.school.Helper;
 
 /**
  * Created by Droid on 8/13/2016.

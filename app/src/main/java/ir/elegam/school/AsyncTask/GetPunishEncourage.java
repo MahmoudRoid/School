@@ -3,16 +3,19 @@ package ir.elegam.school.AsyncTask;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.AsyncTask;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.IOException;
 import java.util.ArrayList;
+
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import ir.elegam.school.Classes.MyApplication;
-import ir.elegam.school.Helper.SuperiorStudents;
 import ir.elegam.school.Classes.URLS;
-import ir.elegam.school.Interface.IWebservice;
+import ir.elegam.school.Helper.PunishEncourage;
+import ir.elegam.school.Interface.IWebservice2;
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -20,17 +23,16 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 /**
- * Created by Droid on 8/13/2016.
+ * Created by Droid on 8/14/2016.
  */
-public class GetSuperiorStudents extends AsyncTask<String,Void,String>{
-    public ArrayList<SuperiorStudents> superiorStudentsArrayList;
+public class GetPunishEncourage extends AsyncTask<String,Void,String> {
+    public ArrayList<PunishEncourage> punisharraylist;
+    public ArrayList<PunishEncourage> encouragearraylist;
     public Context context;
-    private IWebservice delegate = null;
-    public String username,password;
-
+    private IWebservice2 delegate = null;
     SweetAlertDialog pDialog ;
 
-    public GetSuperiorStudents(Context context, IWebservice delegate){
+    public GetPunishEncourage(Context context, IWebservice2 delegate){
         this.context=context;
         this.delegate=delegate;
         pDialog = new SweetAlertDialog(context, SweetAlertDialog.PROGRESS_TYPE);
@@ -56,7 +58,9 @@ public class GetSuperiorStudents extends AsyncTask<String,Void,String>{
                 OkHttpClient client = new OkHttpClient();
                 RequestBody body = new FormBody.Builder()
                         .add("Token",myApplication.Token)
-                        .add("Code","superior_student")
+                        // todo : modify sid ( dynamic )
+                        .add("Sid","0")
+                        .add("Code","punish_encourage_item")
                         .build();
                 Request request = new Request.Builder()
                         .url(URLS.WEB_SERVICE_URL)
@@ -87,30 +91,47 @@ public class GetSuperiorStudents extends AsyncTask<String,Void,String>{
         }
         else {
             try {
-                superiorStudentsArrayList = new ArrayList<SuperiorStudents>();
+                punisharraylist = new ArrayList<PunishEncourage>();
+                encouragearraylist = new ArrayList<PunishEncourage>();
 
                 JSONObject jsonObject =new JSONObject(result);
                 if(jsonObject.getInt("Type")==1){
                     // save Token into my application class
-                    JSONArray jsonArray=jsonObject.getJSONArray("List");
+                    JSONArray punish_jsonArray=jsonObject.getJSONArray("Punish");
+                    JSONArray encourage_jsonArray=jsonObject.getJSONArray("Encourage");
 
-                    for(int i=0;i<jsonArray.length();i++){
-                        JSONObject obj = jsonArray.getJSONObject(i);
+                    // parse punish
+                    for(int i=0;i<punish_jsonArray.length();i++){
+                        JSONObject obj = punish_jsonArray.getJSONObject(i);
 
-                        String name=obj.getString("Name");
-                        String sal_tahsili=obj.getString("AcademicYear");
-                        String class_number=obj.getString("ClassNumber");
-                        String image_url=obj.getString("Photo");
+                        String date=obj.getString("Date");
+                        String description=obj.getString("Description");
 
-                        SuperiorStudents students=new SuperiorStudents(name,sal_tahsili,class_number,image_url);
-                        superiorStudentsArrayList.add(students);
+                        PunishEncourage punish=new PunishEncourage(date,description);
+                        punisharraylist.add(punish);
 
                         // TODO : add too database
 
                     }
 
-                    if(superiorStudentsArrayList.size()>0){
-                        delegate.getResult(superiorStudentsArrayList);
+                    // parse encourage
+                    for(int i=0;i<encourage_jsonArray.length();i++){
+                        JSONObject obj = encourage_jsonArray.getJSONObject(i);
+
+                        String date=obj.getString("Date");
+                        String description=obj.getString("Description");
+
+                        PunishEncourage encourage=new PunishEncourage(date,description);
+                        encouragearraylist.add(encourage);
+
+                        // TODO : add too database
+
+                    }
+
+
+
+                    if((punisharraylist.size()>0) || encouragearraylist.size()>0){
+                        delegate.getResult(punisharraylist,encouragearraylist);
                     }
                     else { delegate.getError("problem");}
 
@@ -127,3 +148,4 @@ public class GetSuperiorStudents extends AsyncTask<String,Void,String>{
         }
     }
 }
+

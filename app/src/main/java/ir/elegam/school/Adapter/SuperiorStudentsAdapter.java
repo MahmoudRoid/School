@@ -13,7 +13,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import java.util.ArrayList;
 
-import ir.elegam.school.Classes.SuperiorStudents;
+import ir.elegam.school.Helper.SuperiorStudents;
 import ir.elegam.school.R;
 
 /**
