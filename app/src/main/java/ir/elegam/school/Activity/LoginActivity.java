@@ -82,8 +82,6 @@ public class LoginActivity extends AppCompatActivity implements IWebservice{
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        // todo : add exit diolog
         new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
                 .setTitleText("اخطار")
                 .setContentText("مایل به خروج هستید ؟")

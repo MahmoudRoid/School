@@ -22,6 +22,11 @@
         android:title="@string/menu_website" />
 
     <item
+        android:id="@+id/action_favorites"
+        android:icon="@drawable/favblack"
+        android:title="@string/menu_favorite" />
+
+    <item
         android:id="@+id/action_exit"
         android:icon="@drawable/settings_power_black"
         android:title="@string/menu_exit" />

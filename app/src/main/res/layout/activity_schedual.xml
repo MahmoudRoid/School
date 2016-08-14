@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appbar_schedual"
+        layout="@layout/app_bar"/>
+
+    <Button
+        android:id="@+id/btnWeek_schedual"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:text="برنامه هفتگی" />
+
+    <Button
+        android:id="@+id/btnExam_schedual"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:text="برنامه امتحانات"/>
+
+    <Button
+        android:id="@+id/btnAzmoon_schedual"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:text="برنامه آزمون ها"/>
+
+    <Button
+        android:id="@+id/btnMulti_schedual"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:text="کلاس های فوق برنامه"/>
+
+</LinearLayout>

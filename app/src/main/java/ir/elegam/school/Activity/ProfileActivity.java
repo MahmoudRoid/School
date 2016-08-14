@@ -1,5 +1,6 @@
 package ir.elegam.school.Activity;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 import com.kennyc.bottomsheet.BottomSheet;
 import com.kennyc.bottomsheet.BottomSheetListener;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import ir.elegam.school.Classes.Variables;
 import ir.elegam.school.R;
 
@@ -94,7 +96,7 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
         lay1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(ProfileActivity.this, WeekActivity.class));
             }
         });
 
@@ -197,15 +199,54 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.action_linkedIn:
+                Toast.makeText(ProfileActivity.this, "LinkedIn", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.action_instagram:
                 Toast.makeText(ProfileActivity.this, "INSTAGRAM", Toast.LENGTH_SHORT).show();
                 break;
-
+            case R.id.action_googleplus:
+                Toast.makeText(ProfileActivity.this, "Google+", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_website:
+                Toast.makeText(ProfileActivity.this, "Website", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_favorites:
+                startActivity(new Intent(ProfileActivity.this, FavoriteActivity.class));
+                break;
+            case R.id.action_exit:
+                finish();
+                break;
             default:
                 break;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                .setTitleText("اخطار")
+                .setContentText("مایل به خروج هستید ؟")
+                .setConfirmText("بله")
+                .setCancelText("خیر")
+                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sweetAlertDialog) {
+                        sweetAlertDialog.dismiss();
+                        moveTaskToBack(true);
+                        finish();
+                        System.exit(0);
+                    }
+                })
+                .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sw) {
+                        sw.dismiss();
+                    }
+                })
+                .show();
     }
 
 }// end class

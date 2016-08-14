@@ -30,10 +30,12 @@ public class SplashActivity extends AppCompatActivity {
                 if(has_login){
                     startActivity(new Intent(SplashActivity.this,ProfileActivity.class));
                     overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+                    finish();
                 }
                 else {
                     startActivity(new Intent(SplashActivity.this,LoginActivity.class));
                     overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+                    finish();
                 }
             }
         }, 1500);

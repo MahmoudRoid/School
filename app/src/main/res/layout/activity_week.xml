@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_week"
+        layout="@layout/app_bar"/>
+
+    <ir.elegam.school.Classes.Scroll.VScroll
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/vScroll_week">
+
+        <ir.elegam.school.Classes.Scroll.HScroll
+            android:id="@+id/hScroll_week"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="7">
+
+                <TableRow
+                    android:id="@+id/tableRowHeader_week"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/txt1Header_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/super_cell_shape"
+                        android:padding="5dp"
+                        android:text="ساعت ششم"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt2Header_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/super_cell_shape"
+                        android:padding="5dp"
+                        android:text="ساعت پنجم"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt3Header_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/super_cell_shape"
+                        android:padding="5dp"
+                        android:text="ساعت چهارم"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt4Header_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/super_cell_shape"
+                        android:padding="5dp"
+                        android:text="ساعت سوم"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt5Header_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/super_cell_shape"
+                        android:padding="5dp"
+                        android:text="ساعت دوم"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt6Header_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/super_cell_shape"
+                        android:padding="5dp"
+                        android:text="ساعت اول"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txtTitleHeader_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/super_cell_shape"
+                        android:padding="5dp"
+                        android:text="/"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_margin="2dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow1_week"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/txt11_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt21_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt31_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt41_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt51_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt61_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txtTitle1_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/super_cell_shape"
+                        android:padding="5dp"
+                        android:text="شنبه"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_margin="2dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow2_week"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/txt12_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt22_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt32_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt42_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt52_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt62_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txtTitle2_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/super_cell_shape"
+                        android:padding="5dp"
+                        android:text="یکشنبه"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_margin="2dp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow3_week"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/txt13_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt23_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt33_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt43_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt53_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt63_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txtTitle3_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/super_cell_shape"
+                        android:padding="5dp"
+                        android:text="دوشنبه"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_margin="2dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow4_week"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/txt14_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt24_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt34_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt44_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt54_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt64_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txtTitle4_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/super_cell_shape"
+                        android:padding="5dp"
+                        android:text="سشنبه"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_margin="2dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow5_week"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/txt15_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt25_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt35_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt45_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt55_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt65_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txtTitle5_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/super_cell_shape"
+                        android:padding="5dp"
+                        android:text="چهارشنبه"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_margin="2dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow6_week"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/txt16_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt26_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt36_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt46_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt56_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt66_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txtTitle6_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/super_cell_shape"
+                        android:padding="5dp"
+                        android:text="پنجشنبه"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:singleLine="false"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_margin="2dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow7_week"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/txt17_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt27_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt37_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt47_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt57_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txt67_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shap"
+                        android:padding="5dp"
+                        android:text="TextView"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_margin="2dp" />
+
+                    <TextView
+                        android:id="@+id/txtTitle7_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/super_cell_shape"
+                        android:padding="5dp"
+                        android:text="جمعه"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_margin="2dp" />
+
+                </TableRow>
+
+            </TableLayout>
+        </ir.elegam.school.Classes.Scroll.HScroll>
+    </ir.elegam.school.Classes.Scroll.VScroll>
+</LinearLayout>

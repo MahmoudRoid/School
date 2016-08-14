@@ -9,6 +9,7 @@
     <string name="menu_website">Website</string>
     <string name="menu_exit">خروج</string>
     <string name="menu_favorite">علاقمندی ها</string>
+    <string name="menu_share">اشتراک گذاری</string>
 
     <string name="error_invalid">معتبر نیست!</string>
     <string name="error_length">تعداد کاراکترها نامعتبر است.</string>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar_aboutus"
+            layout="@layout/app_bar" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/ivTelegram_aboutus"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/telegram"
+                    android:background="@drawable/shape_aboutus" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/ivInstagram_aboutus"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/instagram"
+                    android:background="@drawable/shape_aboutus" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/ivWebsite_aboutus"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/website"
+                    android:background="@drawable/shape_aboutus" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/ivCal_aboutus"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/call"
+                    android:background="@drawable/shape_aboutus" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" \n الگام \n پیشرو در صنعت فناوری اطلاعات از گام نخست تا آرمان بازه ای نیست!"
+                    android:id="@+id/txt_aboutus"
+                    android:gravity="right"
+                    android:layout_margin="15dp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_aboutus"
+        app:backgroundTint="@color/pri500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="normal"
+        android:src="@android:drawable/ic_dialog_email"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="15dp" />
+
+</android.support.design.widget.CoordinatorLayout>

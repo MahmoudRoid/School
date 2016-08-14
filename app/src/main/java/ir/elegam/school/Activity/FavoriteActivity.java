@@ -42,7 +42,7 @@ public class FavoriteActivity extends AppCompatActivity {
     }// end onCreate()
 
     private void define(){
-        //db = new database(this);
+        db = new database(this);
         San = Typeface.createFromAsset(getAssets(), "fonts/SansLight.ttf");
         toolbar = (Toolbar) findViewById(R.id.toolbar_favorite);
         setSupportActionBar(toolbar);
