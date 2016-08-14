@@ -3,15 +3,20 @@ package ir.elegam.school.AsyncTask;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.AsyncTask;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
+
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import ir.elegam.school.Classes.MyApplication;
-import ir.elegam.school.Helper.SuperiorStudents;
 import ir.elegam.school.Classes.URLS;
+import ir.elegam.school.Database.orm.db_ImagesDetailGallery;
+import ir.elegam.school.Helper.ImagesDetailGallery;
 import ir.elegam.school.Interface.IWebservice;
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
@@ -20,18 +25,20 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 /**
- * Created by Droid on 8/13/2016.
+ * Created by Droid on 8/14/2016.
  */
-public class GetSuperiorStudents extends AsyncTask<String,Void,String>{
-    public ArrayList<SuperiorStudents> superiorStudentsArrayList;
+public class GetImageDetail extends AsyncTask<String,Void,String> {
+    public ArrayList<ImagesDetailGallery> imageGalleryArrayList;
     public Context context;
     private IWebservice delegate = null;
+    public int category_id;
 
     SweetAlertDialog pDialog ;
 
-    public GetSuperiorStudents(Context context, IWebservice delegate){
+    public GetImageDetail(Context context, IWebservice delegate,int category_id){
         this.context=context;
         this.delegate=delegate;
+        this.category_id=category_id;
         pDialog = new SweetAlertDialog(context, SweetAlertDialog.PROGRESS_TYPE);
     }
 
@@ -55,7 +62,8 @@ public class GetSuperiorStudents extends AsyncTask<String,Void,String>{
                 OkHttpClient client = new OkHttpClient();
                 RequestBody body = new FormBody.Builder()
                         .add("Token",myApplication.Token)
-                        .add("Code","superior_student")
+                        .add("Category_id",String.valueOf(category_id))
+                        .add("Code","Image_Category")
                         .build();
                 Request request = new Request.Builder()
                         .url(URLS.WEB_SERVICE_URL)
@@ -85,8 +93,18 @@ public class GetSuperiorStudents extends AsyncTask<String,Void,String>{
             }
         }
         else {
+
+            // pak kardane database ha baraye rikhtane data e jadid
             try {
-                superiorStudentsArrayList = new ArrayList<SuperiorStudents>();
+                List<db_ImagesDetailGallery> list = db_ImagesDetailGallery.listAll(db_ImagesDetailGallery.class);
+                if(list.size()>0){
+                    db_ImagesDetailGallery.deleteAll(db_ImagesDetailGallery.class);
+                }
+            }
+            catch (Exception e){e.printStackTrace();}
+
+            try {
+                imageGalleryArrayList = new ArrayList<ImagesDetailGallery>();
 
                 JSONObject jsonObject =new JSONObject(result);
                 if(jsonObject.getInt("Type")==1){
@@ -96,23 +114,21 @@ public class GetSuperiorStudents extends AsyncTask<String,Void,String>{
                     for(int i=0;i<jsonArray.length();i++){
                         JSONObject obj = jsonArray.getJSONObject(i);
 
-                        String name=obj.getString("Name");
-                        String sal_tahsili=obj.getString("AcademicYear");
-                        String class_number=obj.getString("ClassNumber");
+                        int id=obj.getInt("Id");
                         String image_url=obj.getString("Photo");
 
-                        SuperiorStudents students=new SuperiorStudents(name,sal_tahsili,class_number,image_url);
-                        superiorStudentsArrayList.add(students);
+                        ImagesDetailGallery category=new ImagesDetailGallery(id,image_url);
+                        imageGalleryArrayList.add(category);
 
                         // TODO : add too database
-
+                        db_ImagesDetailGallery db = new db_ImagesDetailGallery(id,image_url);
+                        db.save();
                     }
 
-                    if(superiorStudentsArrayList.size()>0){
-                        delegate.getResult(superiorStudentsArrayList);
+                    if(imageGalleryArrayList.size()>0){
+                        delegate.getResult(imageGalleryArrayList);
                     }
                     else { delegate.getError("problem");}
-
                 }
                 else {
                     // set error
@@ -126,3 +142,4 @@ public class GetSuperiorStudents extends AsyncTask<String,Void,String>{
         }
     }
 }
+
