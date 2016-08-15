@@ -71,6 +71,7 @@
             android:name=".Activity.WeekActivity"
             android:label=""
             android:screenOrientation="landscape" />
+        <!-- sdfsfsdfsdf -->
         <activity android:name=".Activity.ImageCategoryActivity" />
         <activity android:name=".Activity.ImagesDetailActivity" />
         <activity android:name=".Activity.ArticleActivity"></activity>
