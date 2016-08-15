@@ -1,10 +1,14 @@
 package ir.elegam.school.Activity;
 
+import android.app.DownloadManager;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,6 +19,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +27,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 import ir.elegam.school.Adapter.Schedual_Adapter;
 import ir.elegam.school.AsyncTask.Async_GetSchedual;
 import ir.elegam.school.Classes.URLS;
+import ir.elegam.school.Classes.Variables;
 import ir.elegam.school.Helper.Object_Schdual;
 import ir.elegam.school.R;
 
@@ -30,7 +36,7 @@ public class BarnameActivity extends AppCompatActivity implements Async_GetSched
     private Toolbar toolbar;
     private Typeface San;
     private TextView txtToolbar;
-    private String What="", URL= URLS.WEB_SERVICE_URL;
+    private String What="", URL= URLS.WEB_SERVICE_URL, DOWNLOAD_LINK="";
     private RecyclerView rv;
     private Schedual_Adapter mAdapter;
     private List<Object_Schdual> mylist = new ArrayList<>();
@@ -94,6 +100,41 @@ public class BarnameActivity extends AppCompatActivity implements Async_GetSched
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }// isNetworkAvailable()
 
+    public void file_download(String uRl,String nameoffile) {
+        File direct = new File(Variables.PDF);
+        if (!direct.exists()) {
+            direct.mkdirs();
+        }
+        File file = new File(direct, nameoffile);
+        if (file.exists()) {
+            show(nameoffile);
+        } else
+        {
+            DownloadManager mgr = (DownloadManager) this.getSystemService(Context.DOWNLOAD_SERVICE);
+            Uri downloadUri = Uri.parse(uRl);
+            DownloadManager.Request request = new DownloadManager.Request(downloadUri);
+            request.setAllowedNetworkTypes(
+                    DownloadManager.Request.NETWORK_WIFI
+                            | DownloadManager.Request.NETWORK_MOBILE)
+                    .setAllowedOverRoaming(false).setTitle("دانلود pdf")
+                    .setDestinationInExternalPublicDir("/SCHOOL/PDFs", nameoffile);
+            mgr.enqueue(request);
+        }
+    }// end file_download()
+
+    public void show(String filename)
+    {
+        File file = new File(Variables.PDF +"/"+ filename);
+        Intent target = new Intent(Intent.ACTION_VIEW);
+        target.setDataAndType(Uri.fromFile(file),"application/pdf");
+        target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+
+        Intent intent = Intent.createChooser(target, "Open File");
+        try {
+            startActivity(intent);
+        } catch (ActivityNotFoundException e) { e.printStackTrace(); }
+    }// end show()
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_download, menu);
@@ -109,7 +150,7 @@ public class BarnameActivity extends AppCompatActivity implements Async_GetSched
                 break;
 
             case R.id.action_download:
-                // download pdf from server
+                file_download(DOWNLOAD_LINK,What);
                 break;
 
             default:

@@ -1,47 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ccff00"
+    android:background="@drawable/login_background"
     android:id="@+id/login_relative">
 
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         android:orientation="vertical"
         android:layout_centerVertical="true">
 
-
-        <android.support.v7.widget.AppCompatEditText
-            android:id="@+id/username_edt"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til1_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="شناسه کاربری"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:textColorHint="@color/white">
 
-            />
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/username_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_username"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:gravity="right"
+                android:textColorHint="@color/white"/>
+        </android.support.design.widget.TextInputLayout>
 
-        <android.support.v7.widget.AppCompatEditText
-            android:id="@+id/password_edt"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til2_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="رمز عبور" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColorHint="@color/white">
 
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/password_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_login"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:gravity="right"
+                android:textColorHint="@color/white"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:text=""
+            android:layout_weight="1"/>
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/signin_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="@dimen/_60sdp"
             android:text="ورود"
-            android:textColor="#FFFFFF"
-            android:textSize="30sp"
-            android:background="@drawable/buttonshape"
-            android:shadowRadius="5" />
-
+            android:background="@drawable/shape_button_blue_lowopacity" />
 
     </android.support.v7.widget.LinearLayoutCompat>
 

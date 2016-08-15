@@ -71,6 +71,7 @@
             android:name=".Activity.WeekActivity"
             android:label=""
             android:screenOrientation="landscape" />
+        <activity android:name=".Activity.MoneyActivity"></activity>
         <!-- sdfsfsdfsdf -->
         <activity android:name=".Activity.ImageCategoryActivity" />
         <activity android:name=".Activity.ImagesDetailActivity" />

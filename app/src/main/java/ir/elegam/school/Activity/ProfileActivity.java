@@ -57,6 +57,7 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
         lay8 = (LinearLayout) findViewById(R.id.lay8_profile);
         lay9 = (LinearLayout) findViewById(R.id.lay9_profile);
         lay10 = (LinearLayout) findViewById(R.id.lay10_profile);
+
         txt1 = (TextView) findViewById(R.id.txt1_profile);
         txt2 = (TextView) findViewById(R.id.txt2_profile);
         txt3 = (TextView) findViewById(R.id.txt3_profile);

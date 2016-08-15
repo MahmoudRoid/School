@@ -2,8 +2,10 @@ package ir.elegam.school.Activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatEditText;
@@ -26,13 +28,29 @@ public class LoginActivity extends AppCompatActivity implements IWebservice{
     AppCompatEditText passwordEdt;
     @BindView(R.id.signin_btn)
     AppCompatButton signinBtn;
+    private TextInputLayout til1,til2;
+    private Typeface San;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
-    }
+        define();
+    }// end onCreate()
+
+    private void define(){
+        San = Typeface.createFromAsset(getAssets(), "fonts/SansLight.ttf");
+
+        til1 = (TextInputLayout) findViewById(R.id.til1_login);
+        til2 = (TextInputLayout) findViewById(R.id.til2_login);
+        til1.setTypeface(San);
+        til2.setTypeface(San);
+        passwordEdt.setTypeface(San);
+        usernameEdt.setTypeface(San);
+        signinBtn.setTypeface(San);
+
+    }// end define()
 
     @OnClick(R.id.signin_btn)
     public void onClick() {

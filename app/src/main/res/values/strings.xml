@@ -31,5 +31,7 @@
     <string name="prompt_password">پسورد فعلی</string>
     <string name="prompt_new_password">پسورد جدید</string>
     <string name="prompt_again_new_password">تکرار پسورد جدید</string>
+    <string name="prompt_login">کلمه عبور</string>
+    <string name="prompt_username">شناسه کاربری</string>
 
 </resources>
