@@ -19,7 +19,7 @@
     <item>
         <shape
             android:shape="rectangle">
-    		
+    		<solid android:color="@color/pri500"/>
     		<corners android:bottomRightRadius="180dip"
     			android:bottomLeftRadius="180dip"
    			 	android:topRightRadius="180dip"
