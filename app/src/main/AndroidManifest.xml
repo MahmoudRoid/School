@@ -87,7 +87,8 @@
             android:name=".Activity.ArticleActivity"
             android:label=""
             android:screenOrientation="landscape" />
-        <activity android:name=".Activity.GradesActivity"></activity>
+        <activity android:name=".Activity.GradesActivity" />
+        <activity android:name=".Activity.CriticSuggestionActivity"></activity>
     </application>
 
 </manifest>
