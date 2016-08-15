@@ -71,11 +71,23 @@
             android:name=".Activity.WeekActivity"
             android:label=""
             android:screenOrientation="landscape" />
-        <activity android:name=".Activity.MoneyActivity"></activity>
-        <!-- sdfsfsdfsdf -->
-        <activity android:name=".Activity.ImageCategoryActivity" />
-        <activity android:name=".Activity.ImagesDetailActivity" />
-        <activity android:name=".Activity.ArticleActivity"></activity>
+        <activity
+            android:name=".Activity.MoneyActivity"
+            android:label=""
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Activity.ImageCategoryActivity"
+            android:label=""
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Activity.ImagesDetailActivity"
+            android:label=""
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Activity.ArticleActivity"
+            android:label=""
+            android:screenOrientation="landscape" />
+        <activity android:name=".Activity.GradesActivity"></activity>
     </application>
 
 </manifest>

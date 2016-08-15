@@ -132,7 +132,7 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
         lay5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(ProfileActivity.this, GradesActivity.class));
             }
         });
 

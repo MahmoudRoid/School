@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_80sdp"
+    android:background="?attr/colorPrimary"
+    app:layout_collapseMode="pin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txtToolbar_appbar_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:text="لیست نمرات"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spr_appbar_spinner"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"/>
+    </LinearLayout>
+
+</android.support.v7.widget.Toolbar>
