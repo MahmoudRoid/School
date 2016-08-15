@@ -8,8 +8,10 @@
     <string name="menu_googleplus">Google +</string>
     <string name="menu_website">Website</string>
     <string name="menu_exit">خروج</string>
+    <string name="menu_sync">همگام سازی</string>
     <string name="menu_favorite">علاقمندی ها</string>
     <string name="menu_share">اشتراک گذاری</string>
+    <string name="menu_download">دریافت</string>
 
     <string name="error_invalid">معتبر نیست!</string>
     <string name="error_length">تعداد کاراکترها نامعتبر است.</string>
@@ -24,5 +26,10 @@
     <string name="error_nework">تلاش برای اتصال به اینترنت</string>
     <string name="error_empty_list">لیست علاقمندی های شما خالیست!</string>
     <string name="title_activity_mosque">Map</string>
+
+
+    <string name="prompt_password">پسورد فعلی</string>
+    <string name="prompt_new_password">پسورد جدید</string>
+    <string name="prompt_again_new_password">تکرار پسورد جدید</string>
 
 </resources>

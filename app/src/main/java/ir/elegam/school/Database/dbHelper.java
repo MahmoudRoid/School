@@ -21,6 +21,7 @@ public class dbHelper extends SQLiteOpenHelper{
 	private static final String Date 		= "Date";
 	private static final String ImageUrl 	= "ImageUrl";
 	private static final String Favorite 	= "Favorite";
+	private static final String Faction 	= "Faction";
 	
 	private static final String CREATE_TABLE = "CREATE TABLE "+ TABLE_NAME_NEWS +" ( "+
     ID       		+" INTEGER PRIMARY KEY AUTOINCREMENT, "+
@@ -29,6 +30,7 @@ public class dbHelper extends SQLiteOpenHelper{
 	Context     	+" TEXT, "+
 	Date     		+" TEXT, "+
 	ImageUrl     	+" TEXT, "+
+	Faction			+" TEXT, "+
 	Favorite    	+" TEXT "+
     ");";
 	

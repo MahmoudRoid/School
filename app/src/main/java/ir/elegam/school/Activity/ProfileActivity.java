@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +31,7 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
     private LinearLayout lay1,lay2,lay3,lay4,lay5,lay6,lay7,lay8,lay9,lay10;
     private TextView txt1,txt2,txt3,txt4,txt5,txt6,txt7,txt8,txt9,txt10,txtSentences,txtStudent;
     private Typeface San;
+    private ImageView ivSettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +69,7 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
         txt10 = (TextView) findViewById(R.id.txt10_profile);
         txtSentences = (TextView) findViewById(R.id.txtSentences_profile);
         txtStudent = (TextView) findViewById(R.id.txtStudent_profile);
+        ivSettings = (ImageView) findViewById(R.id.ivSettings_profile);
 
         txt1.setTypeface(San);
         txt2.setTypeface(San);
@@ -100,7 +103,7 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
         lay1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ProfileActivity.this, WeekActivity.class));
+
             }
         });
 
@@ -121,7 +124,7 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
         lay4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(ProfileActivity.this, SchedualActivity.class));
             }
         });
 
@@ -166,6 +169,14 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
 
             }
         });
+
+        ivSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ProfileActivity.this, SettingActivity.class));
+            }
+        });
+
 
     }// end OnClickLoader()
 

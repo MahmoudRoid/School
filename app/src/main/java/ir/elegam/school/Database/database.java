@@ -11,12 +11,13 @@ import ir.elegam.school.Helper.Object_News;
 
 public class database {
 
-    static final String SID			= "idmelk";         // 1
-static final String TITLE 			= "city";           // 2
-static final String CONTEXT 		= "address";        // 3
-    static final String DATE 		= "deal_kind";      // 4
-    static final String IMAGEURL 	= "property_kind";  // 5
-static final String FAVORITE 			= "metraj";     // 6
+    static final String SID			= "Sid";       // 1
+    static final String TITLE 		= "Title";     // 2
+    static final String CONTEXT 	= "Context";   // 3
+    static final String DATE 		= "Date";      // 4
+    static final String IMAGEURL 	= "ImageUrl";  // 5
+    static final String FAVORITE 	= "Favorite";  // 6
+    static final String FACTION 	= "Faction";   // 6
 
     private String TAG = "MY APP";
     public dbHelper dbhelper;
@@ -108,6 +109,7 @@ static final String FAVORITE 			= "metraj";     // 6
         cv.put(DATE,ob.getODate());
         cv.put(IMAGEURL,ob.getOImageUrl());
         cv.put(FAVORITE,ob.getOFav());
+        cv.put(FACTION,ob.getOFav());
         db.insert(dbhelper.getTableName(), SID, cv);
         Log.i(TAG, "insert");
     }

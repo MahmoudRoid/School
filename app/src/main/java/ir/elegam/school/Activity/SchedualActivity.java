@@ -1,5 +1,6 @@
 package ir.elegam.school.Activity;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -51,7 +52,7 @@ public class SchedualActivity extends AppCompatActivity {
         btnWeek.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(SchedualActivity.this, WeekActivity.class));
             }
         });
 

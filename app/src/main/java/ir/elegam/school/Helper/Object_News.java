@@ -8,6 +8,7 @@ public class Object_News {
     public String ODate;
     public String OImageUrl;
     public String OFav;
+    public String OFaction;
 
     public Object_News(
             String Oid,
@@ -15,13 +16,15 @@ public class Object_News {
             String OMatn,
             String ODate,
             String OImageUrl,
-            String OFav){
+            String OFav,
+            String OFaction){
         this.Oid = Oid;
         this.OTile = OTile;
         this.OMatn = OMatn;
         this.ODate = ODate;
         this.OImageUrl = OImageUrl;
         this.OFav = OFav;
+        this.OFaction = OFaction;
     }
 
     public String getOid() {
@@ -71,4 +74,13 @@ public class Object_News {
     public void setOFav(String OFav) {
         this.OFav = OFav;
     }
+
+    public String getOFaction() {
+        return OFaction;
+    }
+
+    public void setOFaction(String OFaction) {
+        this.OFaction = OFaction;
+    }
+
 }// end class

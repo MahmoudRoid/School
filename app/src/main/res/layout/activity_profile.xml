@@ -24,25 +24,50 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="200sp"
+                    android:layout_height="wrap_content"
                     android:background="@color/V_Sormeii"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:textColor="@color/white"
-                        android:lineSpacingExtra="@dimen/_8sdp"
-                        android:textSize="20sp"
+                        android:lineSpacingExtra="@dimen/_4sdp"
+                        android:textSize="@dimen/_12sdp"
                         android:text="امیرحسین مدرس \n کد دانش آموزی : 880322450\n مقطع تحصیلی : سوم دبیرستان \n کلاس : سوم پ"
-                        android:id="@+id/txtStudent_profile" />
+                        android:id="@+id/txtStudent_profile"
+                        android:layout_margin="5dp" />
 
-                    <ImageView
-                        android:layout_width="100sp"
-                        android:layout_height="100sp"
-                        android:id="@+id/imageView"
-                        android:src="@drawable/axe"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginBottom="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="100sp"
+                            android:layout_height="100sp"
+                            android:id="@+id/imageView"
+                            android:src="@drawable/axe"
+                            android:layout_margin="5dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:text=""
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_gravity="center|bottom|right"
+                            android:id="@+id/ivSettings_profile"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:src="@drawable/settings_white"
+                            android:background="@drawable/shape_aboutus"/>
+                    </LinearLayout>
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -50,8 +75,8 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:layout_margin="5dp">
+                android:padding="5dp"
+                android:layout_margin="2dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -63,9 +88,9 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="20sp"
                         android:text="سخن بزرگان"
-                        android:id="@+id/txtSentences_profile" />
+                        android:id="@+id/txtSentences_profile"
+                        android:textSize="@dimen/_12sdp"/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -73,8 +98,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 card_view:cardBackgroundColor="@color/V_Blue"
-                android:padding="10dp"
-                android:layout_margin="5dp">
+                android:padding="5dp"
+                android:layout_margin="2dp">
 
                 <LinearLayout
                     android:id="@+id/lay1_profile"
@@ -92,7 +117,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="20sp"
+                        android:textSize="@dimen/_12sdp"
                         android:text="حضور و غیاب"
                         android:textColor="@color/white"
                         android:id="@+id/txt1_profile" />
@@ -103,8 +128,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 card_view:cardBackgroundColor="@color/V_Red"
-                android:padding="10dp"
-                android:layout_margin="5dp">
+                android:padding="5dp"
+                android:layout_margin="2dp">
 
                 <LinearLayout
                     android:id="@+id/lay2_profile"
@@ -122,7 +147,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="20sp"
+                        android:textSize="@dimen/_12sdp"
                         android:text="مشاوره تحصیلی و تربیتی"
                         android:textColor="@color/white"
                         android:id="@+id/txt2_profile" />
@@ -138,10 +163,10 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="100sp"
+                    android:layout_weight="1"
                     card_view:cardBackgroundColor="@color/V_Yellow"
-                    android:padding="10dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1">
+                    android:padding="5dp"
+                    android:layout_margin="2dp">
 
                     <LinearLayout
                         android:id="@+id/lay3_profile"
@@ -159,7 +184,7 @@
                         <TextView
                             android:layout_width="100sp"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="@dimen/_12sdp"
                             android:text="اعلانات و اطلاعیه ها"
                             android:textColor="@color/white"
                             android:id="@+id/txt3_profile" />
@@ -171,16 +196,15 @@
                     android:layout_height="100sp"
                     android:layout_weight="1"
                     card_view:cardBackgroundColor="@color/V_Violet"
-                    android:padding="10dp"
-                    android:layout_margin="5dp">
+                    android:padding="5dp"
+                    android:layout_margin="2dp">
 
                     <LinearLayout
                         android:id="@+id/lay4_profile"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        android:gravity="center"
-                        android:padding="5sp">
+                        android:gravity="center">
 
                         <ImageView
                             android:layout_width="60sp"
@@ -190,7 +214,7 @@
                         <TextView
                             android:layout_width="100sp"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="@dimen/_12sdp"
                             android:text="اطلاعات تحصیلی"
                             android:textColor="@color/white"
                             android:id="@+id/txt4_profile" />
@@ -209,8 +233,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="100sp"
                     card_view:cardBackgroundColor="@color/V_Pink"
-                    android:padding="10dp"
-                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:layout_margin="2dp"
                     android:layout_weight="1">
 
                     <LinearLayout
@@ -229,8 +253,8 @@
                         <TextView
                             android:layout_width="100sp"
                             android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:text="اخبار"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="نمرات"
                             android:textColor="@color/white"
                             android:id="@+id/txt5__profile" />
                     </LinearLayout>
@@ -241,8 +265,8 @@
                     android:layout_height="100sp"
                     android:layout_weight="1"
                     card_view:cardBackgroundColor="@color/V_Green"
-                    android:padding="10dp"
-                    android:layout_margin="5dp">
+                    android:padding="5dp"
+                    android:layout_margin="2dp">
 
                     <LinearLayout
                         android:id="@+id/lay6_profile"
@@ -260,7 +284,7 @@
                         <TextView
                             android:layout_width="100sp"
                             android:layout_height="wrap_content"
-                            android:textSize="20sp"
+                            android:textSize="@dimen/_12sdp"
                             android:text="سخن بزرگان"
                             android:textColor="@color/white"
                             android:id="@+id/txt6__profile" />
@@ -279,8 +303,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="100sp"
                     card_view:cardBackgroundColor="@color/V_Orange"
-                    android:padding="10dp"
-                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:layout_margin="2dp"
                     android:layout_weight="1">
 
                     <LinearLayout
@@ -299,7 +323,7 @@
                         <TextView
                             android:layout_width="100sp"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="@dimen/_12sdp"
                             android:text="آشنایی با مجموعه"
                             android:textColor="@color/white"
                             android:id="@+id/txt7__profile" />
@@ -311,8 +335,8 @@
                     android:layout_height="100sp"
                     android:layout_weight="1"
                     card_view:cardBackgroundColor="@color/V_Sorkhabi"
-                    android:padding="10dp"
-                    android:layout_margin="5dp">
+                    android:padding="5dp"
+                    android:layout_margin="2dp">
 
                     <LinearLayout
                         android:id="@+id/lay8_profile"
@@ -330,7 +354,7 @@
                         <TextView
                             android:layout_width="100sp"
                             android:layout_height="wrap_content"
-                            android:textSize="20sp"
+                            android:textSize="@dimen/_12sdp"
                             android:text="گالری تصاویر"
                             android:textColor="@color/white"
                             android:id="@+id/txt8_profile" />
@@ -350,8 +374,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="100sp"
                     card_view:cardBackgroundColor="@color/V_Cyan"
-                    android:padding="10dp"
-                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:layout_margin="2dp"
                     android:layout_weight="1">
 
                     <LinearLayout
@@ -370,7 +394,7 @@
                         <TextView
                             android:layout_width="100sp"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="@dimen/_12sdp"
                             android:text="ارتباط با مجموعه"
                             android:textColor="@color/white"
                             android:id="@+id/txt9_profile" />
@@ -382,8 +406,8 @@
                     android:layout_height="100sp"
                     android:layout_weight="1"
                     card_view:cardBackgroundColor="@color/V_VioPink"
-                    android:padding="10dp"
-                    android:layout_margin="5dp">
+                    android:padding="5dp"
+                    android:layout_margin="2dp">
 
                     <LinearLayout
                         android:id="@+id/lay10_profile"
@@ -401,7 +425,7 @@
                         <TextView
                             android:layout_width="100sp"
                             android:layout_height="wrap_content"
-                            android:textSize="20sp"
+                            android:textSize="@dimen/_14sdp"
                             android:text="امور مالی"
                             android:textColor="@color/white"
                             android:id="@+id/txt10_profile" />
@@ -422,6 +446,6 @@
         android:layout_alignParentRight="true"
         android:layout_margin="16dp"
         card_view:fabSize="normal"
-        android:src="@android:drawable/ic_menu_add"/>
+        android:src="@drawable/button_sheet"/>
 
 </FrameLayout>
