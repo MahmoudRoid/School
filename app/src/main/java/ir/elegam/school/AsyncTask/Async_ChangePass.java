@@ -12,12 +12,13 @@ import java.net.URLEncoder;
 
 import ir.elegam.school.Classes.Variables;
 
-public class Async_Get_News extends AsyncTask <Object, Object, Object> {
+public class Async_ChangePass extends AsyncTask <Object, Object, Object> {
 
     String res = "";
-    public GetNews mListener;
+    public ChangePass mListener;
 
-    public interface GetNews {
+    public interface ChangePass {
+        void onStartRequest();
         void onFinishedRequest(String res);
     }
 
@@ -27,7 +28,8 @@ public class Async_Get_News extends AsyncTask <Object, Object, Object> {
         try {
             String data = URLEncoder.encode("Token", "UTF8")  +"="+ URLEncoder.encode(params[1].toString(),"UTF8");
             data += "&"+  URLEncoder.encode("Code", "UTF8")   +"="+ URLEncoder.encode(params[2].toString(),"UTF8");
-            data += "&"+  URLEncoder.encode("Page", "UTF8")   +"="+ URLEncoder.encode(params[3].toString(),"UTF8");
+            data += "&"+  URLEncoder.encode("OldPass", "UTF8")+"="+ URLEncoder.encode(params[3].toString(),"UTF8");
+            data += "&"+  URLEncoder.encode("NewPass", "UTF8")+"="+ URLEncoder.encode(params[4].toString(),"UTF8");
 
             URL link = new URL(params[0].toString());
             HttpURLConnection connect = (HttpURLConnection) link.openConnection();
@@ -66,4 +68,12 @@ public class Async_Get_News extends AsyncTask <Object, Object, Object> {
         }
     }
 
+    @Override
+    protected void onPreExecute()
+    {
+        if(mListener != null)
+        {
+            mListener.onStartRequest();
+        }
+    }
 }// end class

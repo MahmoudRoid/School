@@ -51,6 +51,7 @@ public class NewsActivity extends AppCompatActivity implements Async_Get_News.Ge
     private News_Adapter mAdapter;
     // private String TOKEN = Variables.TOKEN;
     private database db;
+    private String FACTION = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +79,8 @@ public class NewsActivity extends AppCompatActivity implements Async_Get_News.Ge
         mRecyclerView = mPullToLoadView.getRecyclerView();
         LinearLayoutManager manager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(manager);
+
+        FACTION = getIntent().getStringExtra("faction");
 
         ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
@@ -117,7 +120,7 @@ public class NewsActivity extends AppCompatActivity implements Async_Get_News.Ge
                 mAdapter.clear();
                 int count = 0;
                 db.open();
-                count = db.countAll();
+                count = db.countAll("Faction",FACTION);
                 db.close();
 
                 if(count>0)
@@ -127,12 +130,13 @@ public class NewsActivity extends AppCompatActivity implements Async_Get_News.Ge
                     for(int i=0;i<count;i++){
                         db.open();
                         mylist.add(new Object_News(
-                                db.DisplayAll(i,1),
-                                db.DisplayAll(i,2),
-                                db.DisplayAll(i,3),
-                                db.DisplayAll(i,4),
-                                db.DisplayAll(i,5),
-                                db.DisplayAll(i,6)
+                                db.DisplayAll(i,1,"Faction",FACTION),
+                                db.DisplayAll(i,2,"Faction",FACTION),
+                                db.DisplayAll(i,3,"Faction",FACTION),
+                                db.DisplayAll(i,4,"Faction",FACTION),
+                                db.DisplayAll(i,5,"Faction",FACTION),
+                                db.DisplayAll(i,6,"Faction",FACTION),
+                                FACTION
                         ));
                         db.close();
                     }// end for
@@ -176,7 +180,6 @@ public class NewsActivity extends AppCompatActivity implements Async_Get_News.Ge
             async_get_news.execute(url,"TOKEN", "CODE", nextPage);
         }else{
             Toast.makeText(NewsActivity.this, getResources().getString(R.string.error_internet), Toast.LENGTH_SHORT).show();
-
         }
     }// end SendServer()
 
@@ -197,7 +200,7 @@ public class NewsActivity extends AppCompatActivity implements Async_Get_News.Ge
                 String date = jsonObject.optString("DateCreated");
                 String matn = jsonObject.optString("Content");
 
-                Object_News object_news = new Object_News(id,title,matn,date,image_url,"");
+                Object_News object_news = new Object_News(id,title,matn,date,image_url,"",FACTION);
                 mAdapter.add(object_news);
 
                 db.open();

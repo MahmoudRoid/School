@@ -1,6 +1,10 @@
 package ir.elegam.school.Activity;
 
+import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -10,10 +14,15 @@ import android.view.MotionEvent;
 import android.widget.HorizontalScrollView;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+import ir.elegam.school.AsyncTask.Async_GetSchedual;
+import ir.elegam.school.AsyncTask.Async_Get_News;
+import ir.elegam.school.Classes.URLS;
 import ir.elegam.school.R;
 
-public class WeekActivity extends AppCompatActivity {
+public class WeekActivity extends AppCompatActivity implements Async_GetSchedual.GetSchedual{
 
     private Typeface San;
     private TextView txtToolbar;
@@ -21,6 +30,8 @@ public class WeekActivity extends AppCompatActivity {
     private float mx, my;
     private ScrollView vScroll;
     private HorizontalScrollView hScroll;
+    private SweetAlertDialog pDialog;
+    private String URL = URLS.WEB_SERVICE_URL;
     private TextView txtTitle1,txtTitle2,txtTitle3,txtTitle4,txtTitle5,txtTitle6,txtTitle;
     private TextView txtShanbe,txt1Shanbe,txt2Shanbe,txt3Shanbe,txt4Shanbe,txt5Shanbe,txtJome;
     private TextView txtClock10,txtClock20,txtClock30,txtClock40,txtClock50,txtClock60;
@@ -174,7 +185,32 @@ public class WeekActivity extends AppCompatActivity {
         txtClock66.setTypeface(San);
         txtToolbar.setTypeface(San);
 
+        SweetLoader();
+
     }// end define()
+
+    private void SweetLoader(){
+        pDialog = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE);
+        pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+        pDialog.setTitleText("لطفا صبور باشید...");
+        pDialog.setCancelable(true);
+    }// end SweetLoader()
+
+    private void AskServer(){
+        if(isNetworkAvailable()){
+            Async_GetSchedual async = new Async_GetSchedual();
+            async.mListener = WeekActivity.this;
+            async.execute(URL,"TOKEN","CODE","CLASS_ID");
+        }else{
+            Toast.makeText(WeekActivity.this, getResources().getString(R.string.error_internet), Toast.LENGTH_SHORT).show();
+        }
+    }// end AskServer()
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }// isNetworkAvailable()
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -207,7 +243,7 @@ public class WeekActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_empty, menu);
+        getMenuInflater().inflate(R.menu.menu_sync, menu);
         return true;
     }
 
@@ -220,6 +256,10 @@ public class WeekActivity extends AppCompatActivity {
                 finish();
                 break;
 
+            case R.id.action_sync:
+                AskServer();
+                break;
+
             default:
                 break;
 
@@ -227,4 +267,13 @@ public class WeekActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onStartRequest() {
+        pDialog.show();
+    }
+
+    @Override
+    public void onFinishedRequest(String res) {
+
+    }
 }// end class
