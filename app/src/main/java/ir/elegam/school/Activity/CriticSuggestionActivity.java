@@ -60,8 +60,6 @@ public class CriticSuggestionActivity extends AppCompatActivity {
             }
         });
 
-
-
     }
 
     private void setupViewPager(ViewPager viewPager) {

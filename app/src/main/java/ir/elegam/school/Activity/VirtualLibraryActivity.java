@@ -13,26 +13,25 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import ir.elegam.school.Adapter.ViewPagerAdapter;
-import ir.elegam.school.AsyncTask.GetPunishEncourage;
+import ir.elegam.school.Classes.Article;
 import ir.elegam.school.Classes.Internet;
-import ir.elegam.school.Fragment.EncourageFragment;
-import ir.elegam.school.Fragment.PunishFragment;
-import ir.elegam.school.Helper.PunishEncourage;
+import ir.elegam.school.Fragment.KetabJozveFragment;
+import ir.elegam.school.Fragment.NemooneSoalatFragment;
 import ir.elegam.school.Interface.IWebservice2;
 import ir.elegam.school.R;
 
-public class PunishEncourageActivity extends AppCompatActivity implements IWebservice2 {
+public class VirtualLibraryActivity extends AppCompatActivity implements IWebservice2 {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
-    public ArrayList<PunishEncourage> punish_arraylist,encourage_arraylist;
-    public static ArrayList<PunishEncourage> punish_arraylist_static,encourage_arraylist_static;
+    public ArrayList<Article> ketab_jozve_arraylist,nemoone_soalat_arraylist;
+    public static ArrayList<Article> ketab_jozve_arraylist_static,nemoone_soalat_arraylist_static;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_punish_encourage);
+        setContentView(R.layout.activity_virtual_library);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -41,9 +40,9 @@ public class PunishEncourageActivity extends AppCompatActivity implements IWebse
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.back);
         TextView mTitle = (TextView) toolbar.findViewById(R.id.custom_title);
-        mTitle.setText("تشویق و تنبیه");
+        mTitle.setText("کتابخانه مجازی");
 
-        if(Internet.isNetworkAvailable(PunishEncourageActivity.this)){
+        if(Internet.isNetworkAvailable(VirtualLibraryActivity.this)){
             // call web service
 //            GetPunishEncourage getdata= new GetPunishEncourage(PunishEncourageActivity.this,PunishEncourageActivity.this);
 //            getdata.execute();
@@ -51,7 +50,7 @@ public class PunishEncourageActivity extends AppCompatActivity implements IWebse
         else {
             // show error  no net
             Snackbar snackbar = Snackbar
-                    .make(findViewById(R.id.punish_encourage_coordinator), "اتصال اینترنت خود را چک نمایید", Snackbar.LENGTH_LONG);
+                    .make(findViewById(R.id.virtual_library_coordinator), "اتصال اینترنت خود را چک نمایید", Snackbar.LENGTH_LONG);
             snackbar.show();
         }
 
@@ -87,8 +86,8 @@ public class PunishEncourageActivity extends AppCompatActivity implements IWebse
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
-        adapter.addFragment(new PunishFragment(), "تنبیه");
-        adapter.addFragment(new EncourageFragment(), "تشویق");
+        adapter.addFragment(new NemooneSoalatFragment(), "نمونه سوالات");
+        adapter.addFragment(new KetabJozveFragment(), "کتاب و جزوات");
         viewPager.setAdapter(adapter);
     }
 
@@ -96,14 +95,14 @@ public class PunishEncourageActivity extends AppCompatActivity implements IWebse
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
         if(itemId==android.R.id.home){
-            startActivity(new Intent(PunishEncourageActivity.this,ProfileActivity.class));
+            startActivity(new Intent(VirtualLibraryActivity.this,ProfileActivity.class));
         }
         return  true;
     }
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(PunishEncourageActivity.this,ProfileActivity.class));
+        startActivity(new Intent(VirtualLibraryActivity.this,ProfileActivity.class));
         finish();
     }
 
@@ -112,8 +111,8 @@ public class PunishEncourageActivity extends AppCompatActivity implements IWebse
 
     @Override
     public void getResult(Object result, Object result2) throws Exception {
-        this.punish_arraylist_static=this.punish_arraylist= (ArrayList<PunishEncourage>) result;
-        this.encourage_arraylist_static=this.encourage_arraylist= (ArrayList<PunishEncourage>) result2;
+        this.ketab_jozve_arraylist_static=this.ketab_jozve_arraylist= (ArrayList<Article>) result;
+        this.nemoone_soalat_arraylist_static=this.nemoone_soalat_arraylist= (ArrayList<Article>) result2;
     }
 
     @Override
@@ -121,16 +120,16 @@ public class PunishEncourageActivity extends AppCompatActivity implements IWebse
         // dade ee daryaft nashod
 
         Snackbar snackbar = Snackbar
-                .make(findViewById(R.id.punish_encourage_coordinator), "مشکلی پیش آمده است", Snackbar.LENGTH_LONG);
+                .make(findViewById(R.id.virtual_library_coordinator), "مشکلی پیش آمده است", Snackbar.LENGTH_LONG);
         snackbar.show();
     }
 
-    public static ArrayList<PunishEncourage> getPunish_arraylist_static(){
-        return punish_arraylist_static;
+    public static ArrayList<Article> getNemoone_soalat_arraylist_static(){
+        return nemoone_soalat_arraylist_static;
     }
 
-    public static ArrayList<PunishEncourage> getEncourage_arraylist_static(){
-        return encourage_arraylist_static;
+    public static ArrayList<Article> getKetab_jozve_arraylist_static(){
+        return ketab_jozve_arraylist_static;
     }
 
 }

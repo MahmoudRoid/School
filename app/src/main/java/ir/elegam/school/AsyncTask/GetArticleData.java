@@ -17,6 +17,8 @@ import ir.elegam.school.Classes.Article;
 import ir.elegam.school.Classes.MyApplication;
 import ir.elegam.school.Classes.URLS;
 import ir.elegam.school.Database.orm.db_Article;
+import ir.elegam.school.Database.orm.db_KarnameTahsili;
+import ir.elegam.school.Database.orm.db_NomaratAzmoonha;
 import ir.elegam.school.Interface.IWebservice;
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
@@ -31,11 +33,13 @@ public class GetArticleData extends AsyncTask<Void,Void,String> {
     public ArrayList<Article> articleArrayList;
     public Context context;
     private IWebservice delegate = null;
+    private int type;  // 1= nomarat azmoonha | 2=karname | 3=  | 4 =
     SweetAlertDialog pDialog ;
 
-    public GetArticleData(Context context, IWebservice delegate){
+    public GetArticleData(Context context, IWebservice delegate,int type){
         this.context = context;
         this.delegate = delegate;
+        this.type=type;
 
         pDialog= new SweetAlertDialog(context, SweetAlertDialog.PROGRESS_TYPE);
     }
@@ -56,7 +60,7 @@ public class GetArticleData extends AsyncTask<Void,Void,String> {
             OkHttpClient client = new OkHttpClient();
             RequestBody body = new FormBody.Builder()
                     .add("Token",myApplication.Token)
-                    .add("Code","Article")
+                    .add("Code",String.valueOf(type))
                     .build();
             Request request = new Request.Builder()
                     .url(URLS.WEB_SERVICE_URL)
@@ -93,10 +97,27 @@ public class GetArticleData extends AsyncTask<Void,Void,String> {
             // pak kardane database ha baraye rikhtane data e jadid
             try {
 
-                List<db_Article> list = db_Article.listAll(db_Article.class);
-                if(list.size()>0){
-                    db_Article.deleteAll(db_Article.class);
+                if(this.type==1){
+                    List<db_NomaratAzmoonha> list = db_NomaratAzmoonha.listAll(db_NomaratAzmoonha.class);
+                    if(list.size()>0){
+                        db_NomaratAzmoonha.deleteAll(db_Article.class);
+                    }
                 }
+
+                else if(this.type==2){
+                    List<db_KarnameTahsili> list = db_KarnameTahsili.listAll(db_KarnameTahsili.class);
+                    if(list.size()>0){
+                        db_KarnameTahsili.deleteAll(db_Article.class);
+                    }
+                }
+
+                else if(this.type==3){
+
+                }
+                else if(this.type==4){
+
+                }
+
             }
             catch (Exception e){e.printStackTrace();}
 
@@ -113,8 +134,23 @@ public class GetArticleData extends AsyncTask<Void,Void,String> {
                     Article bankAsatid=new Article(name,english_name,semat,image_url);
                     articleArrayList.add(bankAsatid);
 
-                    db_Article db_bankAsatid=new db_Article(name,english_name,semat,image_url);
-                    db_bankAsatid.save();
+
+                    if(this.type==1){
+                        db_NomaratAzmoonha db=new db_NomaratAzmoonha(name,english_name,semat,image_url);
+                        db.save();
+                    }
+
+                    else if(this.type==2){
+                        db_KarnameTahsili db=new db_KarnameTahsili(name,english_name,semat,image_url);
+                        db.save();
+                    }
+
+                    else if(this.type==3){
+
+                    }
+                    else if(this.type==4){
+
+                    }
 
                 }
 

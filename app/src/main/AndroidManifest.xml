@@ -123,7 +123,7 @@
             android:name=".Activity.BarnameActivity"
             android:label=""
             android:screenOrientation="portrait" />
-        <activity android:name=".Activity.ConsultActivity"></activity>
+        <activity android:name=".Activity.ConsultActivity" />
         <activity
             android:name=".Activity.VideoGallaryActivity"
             android:label=""
@@ -131,6 +131,7 @@
         <activity
             android:name=".Activity.ShowVideoActivity"
             android:configChanges="orientation|keyboardHidden|screenLayout|screenSize" />
+        <activity android:name=".Activity.VirtualLibraryActivity"></activity>
     </application>
 
 </manifest>

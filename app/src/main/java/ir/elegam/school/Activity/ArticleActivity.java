@@ -29,6 +29,8 @@ import ir.elegam.school.Classes.Internet;
 import ir.elegam.school.Classes.RecyclerItemClickListener;
 import ir.elegam.school.Classes.Variables;
 import ir.elegam.school.Database.orm.db_Article;
+import ir.elegam.school.Database.orm.db_KarnameTahsili;
+import ir.elegam.school.Database.orm.db_NomaratAzmoonha;
 import ir.elegam.school.Interface.IWebservice;
 import ir.elegam.school.R;
 
@@ -38,11 +40,13 @@ public class ArticleActivity extends AppCompatActivity implements IWebservice {
     private ArticleAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     public ArrayList<Article> nashrieArrayList;
-
+    public int type; // 1 = nomarat azmoonha | 2 = karname |
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article);
+
+        setArtileType();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -51,7 +55,7 @@ public class ArticleActivity extends AppCompatActivity implements IWebservice {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.back);
         TextView mTitle = (TextView) toolbar.findViewById(R.id.custom_title);
-        mTitle.setText("مقالات");
+        mTitle.setText(gettitle());
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.article_fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -59,8 +63,8 @@ public class ArticleActivity extends AppCompatActivity implements IWebservice {
             public void onClick(View view) {
                 if(Internet.isNetworkAvailable(ArticleActivity.this)){
                     // call webservice
-                    GetArticleData getdata=new GetArticleData(ArticleActivity.this,ArticleActivity.this);
-                    getdata.execute();
+                        GetArticleData getdata=new GetArticleData(ArticleActivity.this,ArticleActivity.this,type);
+                        getdata.execute();
                 }
                 else {
                     Snackbar snackbar = Snackbar
@@ -69,39 +73,79 @@ public class ArticleActivity extends AppCompatActivity implements IWebservice {
                 }
             }
         });
-
         init();
+    }
 
+    private void setArtileType() {
+        switch (getIntent().getExtras().getString("what")){
+            case "نتایج آزمون":
+                this.type=1;
+                break;
 
-
+            case "کارنامه ها":
+                this.type=2;
+                break;
+        }
     }
 
 
     public void init(){
         //  check offline database
         ArrayList<Article> arrayList=new ArrayList<Article>();
-        List<db_Article> list= Select.from(db_Article.class).list();
-        if(list.size()>0){
-            // show offline list
-            for(int i=0;i<list.size();i++){
-                Article cs=new Article(list.get(i).getNumber(),list.get(i).getEnglish_name(),list.get(i).getImage_url(),list.get(i).getPdf_url());
-                arrayList.add(cs);
-            }
-            showList(arrayList);
-        }
-        else {
-            // dar gheire in soorat check net va dl
-            if(Internet.isNetworkAvailable(ArticleActivity.this)){
-                // call webservice
-                GetArticleData getdata=new GetArticleData(ArticleActivity.this,ArticleActivity.this);
-                getdata.execute();
+        if(this.type==1){
+
+            List<db_NomaratAzmoonha> list= Select.from(db_NomaratAzmoonha.class).list();
+            if(list.size()>0){
+                // show offline list
+                for(int i=0;i<list.size();i++){
+                    Article cs=new Article(list.get(i).getNumber(),list.get(i).getEnglish_name(),list.get(i).getImage_url(),list.get(i).getPdf_url());
+                    arrayList.add(cs);
+                }
+                showList(arrayList);
             }
             else {
-                Snackbar snackbar = Snackbar
-                        .make(findViewById(R.id.article_relative), "هیچ داده ای جهت نمایش وجود ندارد", Snackbar.LENGTH_LONG);
-                snackbar.show();
+                // dar gheire in soorat check net va dl
+                if(Internet.isNetworkAvailable(ArticleActivity.this)){
+                    // call webservice
+                    GetArticleData getdata=new GetArticleData(ArticleActivity.this,ArticleActivity.this,type);
+                    getdata.execute();
+                }
+                else {
+                    Snackbar snackbar = Snackbar
+                            .make(findViewById(R.id.article_relative), "هیچ داده ای جهت نمایش وجود ندارد", Snackbar.LENGTH_LONG);
+                    snackbar.show();
+                }
             }
         }
+
+
+        else  if(type==2){
+
+            List<db_KarnameTahsili> list= Select.from(db_KarnameTahsili.class).list();
+            if(list.size()>0){
+                // show offline list
+                for(int i=0;i<list.size();i++){
+                    Article cs=new Article(list.get(i).getNumber(),list.get(i).getEnglish_name(),list.get(i).getImage_url(),list.get(i).getPdf_url());
+                    arrayList.add(cs);
+                }
+                showList(arrayList);
+            }
+            else {
+                // dar gheire in soorat check net va dl
+                if(Internet.isNetworkAvailable(ArticleActivity.this)){
+                    // call webservice
+                    GetArticleData getdata=new GetArticleData(ArticleActivity.this,ArticleActivity.this,type);
+                    getdata.execute();
+                }
+                else {
+                    Snackbar snackbar = Snackbar
+                            .make(findViewById(R.id.article_relative), "هیچ داده ای جهت نمایش وجود ندارد", Snackbar.LENGTH_LONG);
+                    snackbar.show();
+                }
+            }
+
+        }
+
     }
 
     @Override
@@ -193,4 +237,16 @@ public class ArticleActivity extends AppCompatActivity implements IWebservice {
         }
     }
 
+    public String gettitle() {
+        String mytitle="";
+        switch (mytitle=getIntent().getExtras().getString("what")){
+            case "کارنامه ها":
+                mytitle="کارنامه ها";
+                break;
+            case "نتایج آزمون":
+                mytitle="نتایج آزمون";
+                break;
+        }
+        return mytitle;
+    }
 }

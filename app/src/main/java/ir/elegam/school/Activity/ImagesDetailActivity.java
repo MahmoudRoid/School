@@ -91,7 +91,7 @@ public class ImagesDetailActivity extends AppCompatActivity implements IWebservi
         if (itemId == R.id.custom_refresh) {
             if (Internet.isNetworkAvailable(ImagesDetailActivity.this)) {
                 // call webservice
-                GetImageCategory getdata = new GetImageCategory(ImagesDetailActivity.this, ImagesDetailActivity.this);
+                GetImageDetail getdata = new GetImageDetail(ImagesDetailActivity.this, ImagesDetailActivity.this, getIntent().getExtras().getInt("id"));
                 getdata.execute();
             } else {
                 Snackbar snackbar = Snackbar
