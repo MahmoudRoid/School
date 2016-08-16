@@ -46,7 +46,7 @@ public class EncourageFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        showList(this.encourage_arraylist);
+      //  showList(this.encourage_arraylist);
     }
 
     public void showList(ArrayList<PunishEncourage> arrayList){

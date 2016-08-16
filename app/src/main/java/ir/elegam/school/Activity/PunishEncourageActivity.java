@@ -42,12 +42,12 @@ public class PunishEncourageActivity extends AppCompatActivity implements IWebse
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.back);
         TextView mTitle = (TextView) toolbar.findViewById(R.id.custom_title);
-        mTitle.setText("نبیه و تشویق");
+        mTitle.setText("تشویق و تنبیه");
 
         if(Internet.isNetworkAvailable(PunishEncourageActivity.this)){
             // call web service
-            GetPunishEncourage getdata= new GetPunishEncourage(PunishEncourageActivity.this,PunishEncourageActivity.this);
-            getdata.execute();
+//            GetPunishEncourage getdata= new GetPunishEncourage(PunishEncourageActivity.this,PunishEncourageActivity.this);
+//            getdata.execute();
         }
         else {
             // show error  no net

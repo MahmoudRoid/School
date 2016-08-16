@@ -1,5 +1,6 @@
 package ir.elegam.school.Activity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Environment;
@@ -8,9 +9,12 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -162,7 +166,7 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
         lay8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                showChooseDialog();
             }
         });
 
@@ -191,6 +195,59 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
 
 
     }// end OnClickLoader()
+
+    private void showChooseDialog() {
+        final Dialog d = new Dialog(this);
+        d.setCancelable(true);
+        d.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        d.setContentView(R.layout.dialog_choose);
+
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        Window window = d.getWindow();
+        lp.copyFrom(window.getAttributes());
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        window.setAttributes(lp);
+
+        final ImageView img=(ImageView)d.findViewById(R.id.ivHeader_dialog);
+        final TextView txtHeader = (TextView) d.findViewById(R.id.txtHeader_dialog);
+        final TextView txtContext = (TextView) d.findViewById(R.id.txtContext_dialog);
+        final TextView txtOne = (TextView) d.findViewById(R.id.txtOne_dialog);
+        final TextView txtTwo = (TextView) d.findViewById(R.id.txtTwo_dialog);
+        final TextView txtThree = (TextView) d.findViewById(R.id.txtThree_dialog);
+
+        img.setVisibility(View.INVISIBLE);
+        txtHeader.setTypeface(San);
+        txtContext.setTypeface(San);
+        txtOne.setTypeface(San);
+        txtTwo.setTypeface(San);
+        txtThree.setTypeface(San);
+
+        txtHeader.setText("انتخاب گالری");
+        txtContext.setText("");
+        txtOne.setText("تصاویر");
+        txtTwo.setVisibility(View.INVISIBLE);
+        txtThree.setText("ویدیو");
+
+        txtHeader.setGravity(Gravity.CENTER_HORIZONTAL);
+
+        txtThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                d.dismiss();
+
+            }
+        });
+
+        txtOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            d.dismiss();
+            }
+        });
+        d.show();
+
+    }
 
     @Override
     public void onSheetShown(@NonNull BottomSheet bottomSheet) {

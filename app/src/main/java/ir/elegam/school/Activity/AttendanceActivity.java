@@ -58,8 +58,8 @@ public class AttendanceActivity extends AppCompatActivity implements IWebservice
 
         // call webservice if internet is available
         if (Internet.isNetworkAvailable(AttendanceActivity.this)) {
-            GetAttendanceData getdata = new GetAttendanceData(AttendanceActivity.this, AttendanceActivity.this);
-            getdata.execute();
+//            GetAttendanceData getdata = new GetAttendanceData(AttendanceActivity.this, AttendanceActivity.this);
+//            getdata.execute();
         }
         else {
             Snackbar snackbar = Snackbar
@@ -119,9 +119,9 @@ public class AttendanceActivity extends AppCompatActivity implements IWebservice
         // call webservice if internet is available
 
         if (Internet.isNetworkAvailable(AttendanceActivity.this)) {
-            GetAttendanceData getdata = new GetAttendanceData(AttendanceActivity.this, AttendanceActivity.this
-            ,year+"/"+monthOfYear+"/"+dayOfMonth );
-            getdata.execute();
+//            GetAttendanceData getdata = new GetAttendanceData(AttendanceActivity.this, AttendanceActivity.this
+//            ,year+"/"+monthOfYear+"/"+dayOfMonth );
+//            getdata.execute();
         }
         else {
             Snackbar snackbar = Snackbar

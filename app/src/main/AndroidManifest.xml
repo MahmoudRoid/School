@@ -107,6 +107,10 @@
             android:name=".Activity.AttendanceActivity"
             android:label=""
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PunishEncourageActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

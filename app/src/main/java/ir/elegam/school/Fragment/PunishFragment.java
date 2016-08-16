@@ -45,7 +45,7 @@ public class PunishFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        showList(this.punish_arraylist);
+      //  showList(this.punish_arraylist);
     }
 
     public void showList(ArrayList<PunishEncourage> arrayList){

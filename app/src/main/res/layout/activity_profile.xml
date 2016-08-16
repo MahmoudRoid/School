@@ -356,7 +356,7 @@
                             android:layout_width="100sp"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/_12sdp"
-                            android:text="گالری تصاویر"
+                            android:text="گالری"
                             android:textColor="@color/white"
                             android:id="@+id/txt8_profile" />
                     </LinearLayout>

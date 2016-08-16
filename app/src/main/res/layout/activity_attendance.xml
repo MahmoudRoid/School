@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/attendance_relative">
 
     <include layout="@layout/custom_toolbar"/>
@@ -12,117 +13,133 @@
         android:layout_height="match_parent"
         android:layout_marginTop="?attr/actionBarSize">
 
-        <LinearLayout
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:orientation="vertical">
-
-            <ir.elegam.school.Classes.CustomTextView
-                android:id="@+id/attendance_date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="25/7/95"
-                android:textSize="25sp"/>
+            android:background="#CFD8DC"
+            card_view:cardCornerRadius="10dp"
+            android:layout_centerInParent="true">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginRight="@dimen/_18sdp"
-                android:layout_marginLeft="@dimen/_18sdp"
-                android:layout_marginTop="@dimen/_18sdp"
-                android:weightSum="1">
+                android:orientation="vertical">
 
                 <ir.elegam.school.Classes.CustomTextView
-                    android:id="@+id/attendance_enter_hour"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/attendance_date"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="07:00"
-                    android:textSize="@dimen/_16sdp"
-                    android:layout_weight="0.5"/>
+                    android:gravity="center_horizontal"
+                    android:text="25/7/95"
+                    android:textSize="30sp"/>
 
-                <ir.elegam.school.Classes.CustomTextView
-                    android:layout_width="wrap_content"
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:gravity="right"
-                    android:text="ساعت ورود"
-                    android:textSize="@dimen/_16sdp"
-                    android:layout_weight="0.5"/>
+                    android:orientation="horizontal"
+                    android:layout_marginRight="@dimen/_18sdp"
+                    android:layout_marginLeft="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:weightSum="1">
+
+                    <ir.elegam.school.Classes.CustomTextView
+                        android:id="@+id/attendance_enter_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07:00"
+                        android:textSize="@dimen/_16sdp"
+                        android:layout_weight="0.5"/>
+
+                    <ir.elegam.school.Classes.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:text="ساعت ورود"
+                        android:textSize="@dimen/_16sdp"
+                        android:layout_weight="0.5"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="@dimen/_18sdp"
+                    android:layout_marginLeft="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:weightSum="1">
+
+                    <ir.elegam.school.Classes.CustomTextView
+                        android:id="@+id/attendance_exit_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="14:00"
+                        android:textSize="@dimen/_16sdp"
+                        android:layout_weight="0.5"/>
+
+                    <ir.elegam.school.Classes.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:text="ساعت خروج"
+                        android:textSize="@dimen/_16sdp"
+                        android:layout_weight="0.5"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="@dimen/_18sdp"
+                    android:layout_marginLeft="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:weightSum="1">
+
+                    <ir.elegam.school.Classes.CustomTextView
+                        android:id="@+id/attendance_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="عادی"
+                        android:textSize="@dimen/_16sdp"
+                        android:layout_weight="0.5"/>
+
+                    <ir.elegam.school.Classes.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:text="وضعیت"
+                        android:textSize="@dimen/_16sdp"
+                        android:layout_weight="0.5"/>
+
+                </LinearLayout>
+
 
             </LinearLayout>
 
+        </android.support.v7.widget.CardView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginRight="@dimen/_18sdp"
-                android:layout_marginLeft="@dimen/_18sdp"
-                android:layout_marginTop="@dimen/_18sdp"
-                android:weightSum="1">
+        <Button
+            android:id="@+id/attendance_choose_date"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:text="انتخاب تاریخ"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:background="@drawable/shape_cycle_main"
+            android:layout_below="@+id/cardview"
+            android:layout_centerHorizontal="true"/>
 
-                <ir.elegam.school.Classes.CustomTextView
-                    android:id="@+id/attendance_exit_hour"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="14:00"
-                    android:textSize="@dimen/_16sdp"
-                    android:layout_weight="0.5"/>
-
-                <ir.elegam.school.Classes.CustomTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:gravity="right"
-                    android:text="ساعت خروج"
-                    android:textSize="@dimen/_16sdp"
-                    android:layout_weight="0.5"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginRight="@dimen/_18sdp"
-                android:layout_marginLeft="@dimen/_18sdp"
-                android:layout_marginTop="@dimen/_18sdp"
-                android:weightSum="1">
-
-                <ir.elegam.school.Classes.CustomTextView
-                    android:id="@+id/attendance_status"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:text="عادی"
-                    android:textSize="@dimen/_16sdp"
-                    android:layout_weight="0.5"/>
-
-                <ir.elegam.school.Classes.CustomTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:gravity="right"
-                    android:text="وضعیت"
-                    android:textSize="@dimen/_16sdp"
-                    android:layout_weight="0.5"/>
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/attendance_choose_date"
-                android:layout_width="@dimen/_70sdp"
-                android:layout_height="@dimen/_70sdp"
-                android:text="انتخاب تاریخ"
-                android:textColor="@color/white"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_18sdp"
-                android:background="@drawable/shape_cycle_main"/>
-
-        </LinearLayout>
     </RelativeLayout>
 </RelativeLayout>
