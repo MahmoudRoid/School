@@ -2,24 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/action_linkedIn"
-        android:icon="@drawable/linkedin"
-        android:title="@string/menu_linkedin" />
+        android:id="@+id/action_aboutus"
+        android:icon="@drawable/settings_power_black"
+        android:title="@string/menu_aboutus" />
 
     <item
-        android:id="@+id/action_instagram"
-        android:icon="@drawable/instagram_menu"
-        android:title="@string/menu_instagram" />
+        android:id="@+id/action_guide"
+        android:icon="@drawable/settings_power_black"
+        android:title="@string/menu_guid" />
 
     <item
-        android:id="@+id/action_googleplus"
-        android:icon="@drawable/googleplus"
-        android:title="@string/menu_googleplus" />
+        android:id="@+id/action_contact_intro"
+        android:icon="@drawable/settings_power_black"
+        android:title="@string/menu_introduce" />
 
     <item
-        android:id="@+id/action_website"
-        android:icon="@drawable/website"
-        android:title="@string/menu_website" />
+        android:id="@+id/action_honor"
+        android:icon="@drawable/settings_power_black"
+        android:title="@string/menu_school_honor" />
 
     <item
         android:id="@+id/action_favorites"

@@ -12,6 +12,10 @@
     <string name="menu_favorite">علاقمندی ها</string>
     <string name="menu_share">اشتراک گذاری</string>
     <string name="menu_download">دریافت</string>
+    <string name="menu_aboutus">درباره ما</string>
+    <string name="menu_introduce">آشنایی و تماس با مجموعه</string>
+    <string name="menu_guid">راهنمای برنامه</string>
+    <string name="menu_school_honor">افتخارات مدرسه</string>
 
     <string name="error_invalid">معتبر نیست!</string>
     <string name="error_length">تعداد کاراکترها نامعتبر است.</string>

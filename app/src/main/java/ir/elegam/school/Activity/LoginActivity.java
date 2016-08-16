@@ -77,6 +77,7 @@ public class LoginActivity extends AppCompatActivity implements IWebservice{
 //        }
 
         startActivity(new Intent(LoginActivity.this,ProfileActivity.class));
+        finish();
 
     }
 

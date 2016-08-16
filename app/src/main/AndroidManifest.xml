@@ -108,6 +108,14 @@
             android:label=""
             android:screenOrientation="portrait" />
         <activity
+            android:name=".Activity.ContactSchool"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.GuideActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".Activity.PunishEncourageActivity"
             android:label=""
             android:screenOrientation="portrait" />

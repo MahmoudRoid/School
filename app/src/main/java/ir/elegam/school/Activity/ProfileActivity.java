@@ -256,7 +256,30 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
 
     @Override
     public void onSheetItemSelected(@NonNull BottomSheet bottomSheet, MenuItem menuItem) {
-        Log.v(Variables.Tag, "onSheetItemSelected");
+        switch (menuItem.getItemId()) {
+            case R.id.action_aboutus:
+                startActivity(new Intent(ProfileActivity.this, AboutusActivity.class));
+                break;
+            case R.id.action_contact_intro:
+                startActivity(new Intent(ProfileActivity.this, ContactSchool.class));
+                break;
+            case R.id.action_guide:
+                startActivity(new Intent(ProfileActivity.this, GuideActivity.class));
+                break;
+            case R.id.action_honor:
+                Intent intent = new Intent(ProfileActivity.this, NewsActivity.class);
+                intent.putExtra("faction","honor");
+                startActivity(intent);
+                break;
+            case R.id.action_favorites:
+                startActivity(new Intent(ProfileActivity.this, FavoriteActivity.class));
+                break;
+            case R.id.action_exit:
+                finish();
+                break;
+            default:
+                break;
+        }
     }
 
     @Override
@@ -282,29 +305,6 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_linkedIn:
-                Toast.makeText(ProfileActivity.this, "LinkedIn", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.action_instagram:
-                Toast.makeText(ProfileActivity.this, "INSTAGRAM", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.action_googleplus:
-                Toast.makeText(ProfileActivity.this, "Google+", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.action_website:
-                Toast.makeText(ProfileActivity.this, "Website", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.action_favorites:
-                startActivity(new Intent(ProfileActivity.this, FavoriteActivity.class));
-                break;
-            case R.id.action_exit:
-                finish();
-                break;
-            default:
-                break;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 
