@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_consult"
+        layout="@layout/app_bar"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager_consult"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <android.support.v4.view.PagerTabStrip
+            android:id="@+id/pagertabstrip_consult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@color/pri500"
+            android:padding="5dp"
+            android:textColor="@color/white" />
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

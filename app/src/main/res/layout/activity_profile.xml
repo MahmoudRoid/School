@@ -325,7 +325,7 @@
                             android:layout_width="100sp"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/_12sdp"
-                            android:text="آشنایی با مجموعه"
+                            android:text="انتقادات و پیشنهادات"
                             android:textColor="@color/white"
                             android:id="@+id/txt7__profile" />
                     </LinearLayout>
@@ -396,7 +396,7 @@
                             android:layout_width="100sp"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/_12sdp"
-                            android:text="ارتباط با مجموعه"
+                            android:text="کتابخانه مجازی"
                             android:textColor="@color/white"
                             android:id="@+id/txt9_profile" />
                     </LinearLayout>

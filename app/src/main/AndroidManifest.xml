@@ -120,6 +120,11 @@
             android:label=""
             android:screenOrientation="portrait" />
         <activity
+            android:name=".Activity.BarnameActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activity.ConsultActivity"></activity>
+        <activity
             android:name=".Activity.VideoGallaryActivity"
             android:label=""
             android:screenOrientation="portrait" />

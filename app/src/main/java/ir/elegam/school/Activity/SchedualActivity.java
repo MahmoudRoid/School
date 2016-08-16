@@ -42,8 +42,12 @@ public class SchedualActivity extends AppCompatActivity {
         btnAzmoon = (Button) findViewById(R.id.btnAzmoon_schedual);
         btnMulti = (Button) findViewById(R.id.btnMulti_schedual);
 
+        txtToolbar.setText("تقویم آموزشی");
         txtToolbar.setTypeface(San);
-
+        btnWeek.setTypeface(San);
+        btnExam.setTypeface(San);
+        btnAzmoon.setTypeface(San);
+        btnMulti.setTypeface(San);
 
     }// end define()
 
@@ -59,21 +63,27 @@ public class SchedualActivity extends AppCompatActivity {
         btnExam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(SchedualActivity.this, BarnameActivity.class);
+                intent.putExtra("what","برنامه امتحانات");
+                startActivity(intent);
             }
         });
 
         btnAzmoon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(SchedualActivity.this, BarnameActivity.class);
+                intent.putExtra("what","برنامه آزمون ها");
+                startActivity(intent);
             }
         });
 
         btnMulti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(SchedualActivity.this, BarnameActivity.class);
+                intent.putExtra("what","کلاس های فوق برنامه");
+                startActivity(intent);
             }
         });
 

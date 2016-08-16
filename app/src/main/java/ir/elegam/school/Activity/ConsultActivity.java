@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import ir.elegam.school.R;
 
-public class MoneyActivity extends AppCompatActivity {
+public class ConsultActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private TextView txtToolbar;
@@ -17,20 +17,20 @@ public class MoneyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_money);
+        setContentView(R.layout.activity_consult);
         define();
 
     }// end onCreate()
 
     private void define(){
         San = Typeface.createFromAsset(getAssets(), "fonts/SansLight.ttf");
-        toolbar = (Toolbar) findViewById(R.id.toolbar_money);
+        toolbar = (Toolbar) findViewById(R.id.toolbar_consult);
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         txtToolbar = (TextView) findViewById(R.id.txtToolbar_appbar);
-        txtToolbar.setText("امور مالی");
+        txtToolbar.setText("مشاوره تحصیلی");
         txtToolbar.setTypeface(San);
 
     }// end define()

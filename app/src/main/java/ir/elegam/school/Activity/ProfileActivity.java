@@ -116,7 +116,7 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
         lay2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ProfileActivity.this, CriticSuggestionActivity.class));
+                startActivity(new Intent(ProfileActivity.this, ConsultActivity.class));
             }
         });
 
@@ -155,10 +155,11 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
             }
         });
 
+        // Activity CriticSuggestionAct
         lay7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(ProfileActivity.this, CriticSuggestionActivity.class));
             }
         });
 
@@ -170,10 +171,11 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
             }
         });
 
+        // Activity Library
         lay9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //startActivity(new Intent(ProfileActivity.this, .class));
             }
         });
 
