@@ -40,7 +40,6 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
         define();
         OnClickLoader();
 
-
     }// end onCreate()
 
     private void define(){
@@ -101,45 +100,54 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
             }
         });
 
+        // Activity Present
         lay1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(ProfileActivity.this, AttendanceActivity.class));
             }
         });
 
+        // Activity Consult
         lay2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(ProfileActivity.this, CriticSuggestionActivity.class));
             }
         });
 
+        // Activity News
         lay3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(ProfileActivity.this, NewsActivity.class);
+                intent.putExtra("faction","news");
+                startActivity(intent);
             }
         });
 
+        // Activity Grade list
         lay4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProfileActivity.this, GradeListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Activity Schedual list
+        lay5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(ProfileActivity.this, SchedualActivity.class));
             }
         });
 
-        lay5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(ProfileActivity.this, GradesActivity.class));
-            }
-        });
-
+        // Activity Punish and Encourage
         lay6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(ProfileActivity.this, PunishEncourageActivity.class));
             }
         });
 
@@ -150,6 +158,7 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
             }
         });
 
+        // Dialog Choose Which Gallery
         lay8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -164,13 +173,15 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
             }
         });
 
+        // Activity Money
         lay10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(ProfileActivity.this, MoneyActivity.class));
             }
         });
 
+        // Activity Settings
         ivSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

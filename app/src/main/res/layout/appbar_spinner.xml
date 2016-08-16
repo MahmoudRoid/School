@@ -35,8 +35,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/spr_appbar_spinner"
+            android:layout_marginRight="15dp"
             android:gravity="center"
-            android:layout_marginBottom="15dp"/>
+            android:layout_marginBottom="15dp" />
     </LinearLayout>
 
 </android.support.v7.widget.Toolbar>

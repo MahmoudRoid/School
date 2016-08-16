@@ -200,7 +200,7 @@ public class NewsActivity extends AppCompatActivity implements Async_Get_News.Ge
                 String date = jsonObject.optString("DateCreated");
                 String matn = jsonObject.optString("Content");
 
-                Object_News object_news = new Object_News(id,title,matn,date,image_url,"",FACTION);
+                Object_News object_news = new Object_News(id+FACTION,title,matn,date,image_url,"",FACTION);
                 mAdapter.add(object_news);
 
                 db.open();

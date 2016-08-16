@@ -74,21 +74,39 @@
         <activity
             android:name=".Activity.MoneyActivity"
             android:label=""
-            android:screenOrientation="landscape" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.ImageCategoryActivity"
             android:label=""
-            android:screenOrientation="landscape" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.ImagesDetailActivity"
             android:label=""
-            android:screenOrientation="landscape" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.ArticleActivity"
             android:label=""
-            android:screenOrientation="landscape" />
-        <activity android:name=".Activity.GradesActivity" />
-        <activity android:name=".Activity.CriticSuggestionActivity"></activity>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.GradesActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.GradeListActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SettingActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CriticSuggestionActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AttendanceActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

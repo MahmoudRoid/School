@@ -216,7 +216,7 @@
                             android:layout_width="100sp"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/_12sdp"
-                            android:text="اطلاعات تحصیلی"
+                            android:text="نمرات و نتایج"
                             android:textColor="@color/white"
                             android:id="@+id/txt4_profile" />
                     </LinearLayout>
@@ -255,7 +255,7 @@
                             android:layout_width="100sp"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/_12sdp"
-                            android:text="نمرات"
+                            android:text="تقویم آموزشی"
                             android:textColor="@color/white"
                             android:id="@+id/txt5__profile" />
                     </LinearLayout>
