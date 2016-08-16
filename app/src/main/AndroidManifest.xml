@@ -21,7 +21,7 @@
             android:value="school.db" />
         <meta-data
             android:name="VERSION"
-            android:value="1" />
+            android:value="2" />
         <meta-data
             android:name="QUERY_LOG"
             android:value="true" />
@@ -119,6 +119,13 @@
             android:name=".Activity.PunishEncourageActivity"
             android:label=""
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.VideoGallaryActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ShowVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize" />
     </application>
 
 </manifest>

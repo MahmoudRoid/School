@@ -10,6 +10,7 @@ public class Variables {
     public static final String ROOT = Environment.getExternalStorageDirectory()+"/SCHOOL";
     public static final String PDF = ROOT + "/PDFs";
     public static final String IMAGES = ROOT + "/images";
+    public static final String VIDEO = ROOT + "/videos";
 
 
 }// end Variables

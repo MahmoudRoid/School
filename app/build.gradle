@@ -38,9 +38,11 @@ dependencies {
     compile 'com.github.tosslife:pullloadview:1.1.0'
     compile 'com.github.satyan:sugar:1.4'
     compile 'com.mohamadamin:persianmaterialdatetimepicker:1.2.1'
+    compile 'com.afollestad:easyvideoplayer:0.2.9'
 }
 
 repositories {
 
     maven { url "https://jitpack.io" }
+    maven { url "https://dl.bintray.com/drummer-aidan/maven" }
 }

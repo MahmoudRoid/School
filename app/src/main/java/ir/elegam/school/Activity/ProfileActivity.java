@@ -235,7 +235,7 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
             @Override
             public void onClick(View v) {
                 d.dismiss();
-
+                startActivity(new Intent(ProfileActivity.this,VideoGallaryActivity.class));
             }
         });
 
@@ -243,6 +243,7 @@ public class ProfileActivity extends AppCompatActivity implements BottomSheetLis
             @Override
             public void onClick(View v) {
             d.dismiss();
+                startActivity(new Intent(ProfileActivity.this,ImageCategoryActivity.class));
             }
         });
         d.show();

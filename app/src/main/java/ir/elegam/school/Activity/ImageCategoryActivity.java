@@ -54,8 +54,8 @@ public class ImageCategoryActivity extends AppCompatActivity implements IWebserv
             public void onClick(View view) {
                 if(Internet.isNetworkAvailable(ImageCategoryActivity.this)){
                     // call webservice
-                    GetImageCategory getdata=new GetImageCategory(ImageCategoryActivity.this,ImageCategoryActivity.this);
-                    getdata.execute();
+//                    GetImageCategory getdata=new GetImageCategory(ImageCategoryActivity.this,ImageCategoryActivity.this);
+//                    getdata.execute();
                 }
                 else {
                     Snackbar snackbar = Snackbar
@@ -86,8 +86,8 @@ public class ImageCategoryActivity extends AppCompatActivity implements IWebserv
 
             if(Internet.isNetworkAvailable(ImageCategoryActivity.this)){
                 // call webservice
-                GetImageCategory getdata=new GetImageCategory(ImageCategoryActivity.this,ImageCategoryActivity.this);
-                getdata.execute();
+//                GetImageCategory getdata=new GetImageCategory(ImageCategoryActivity.this,ImageCategoryActivity.this);
+//                getdata.execute();
             }
             else {
                 Snackbar snackbar = Snackbar

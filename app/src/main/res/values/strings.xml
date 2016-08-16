@@ -17,6 +17,7 @@
     <string name="menu_guid">راهنمای برنامه</string>
     <string name="menu_school_honor">افتخارات مدرسه</string>
 
+    <string name="menu_save">ذخیره بروی دستگاه</string>
     <string name="error_invalid">معتبر نیست!</string>
     <string name="error_length">تعداد کاراکترها نامعتبر است.</string>
     <string name="error_empty">خالیست!</string>
