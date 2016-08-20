@@ -25,6 +25,11 @@ public class VoiceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.voice_fragment, container, false);
         return view;
+
+        /*final Animation animrotate = AnimationUtils.loadAnimation(SplashActivity.this, R.anim.rotate_splash);
+        iv.startAnimation(animrotate);
+        animrotate.setFillAfter(true);*/
+
     }
 
 

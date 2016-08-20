@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivRoundOut_splash"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/circlye_record"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:id="@+id/ivRoundIn_splash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ivRoundOut_splash"
+                android:layout_alignBottom="@id/ivRoundOut_splash"
+                android:layout_alignLeft="@id/ivRoundOut_splash"
+                android:layout_alignRight="@id/ivRoundOut_splash"
+                android:src="@drawable/keyboard_voice_black"
+                android:background="@drawable/shape_cycle_main"
+                android:layout_margin="30dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
