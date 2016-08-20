@@ -103,7 +103,6 @@ public class MoneyActivity extends AppCompatActivity implements Async_Tuition.Ge
         "باقیمانده : "+ RemainingTuition + "\n\n\n");
     }// end init()
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_empty, menu);
