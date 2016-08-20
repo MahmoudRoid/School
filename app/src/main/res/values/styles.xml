@@ -36,4 +36,10 @@
         <item name="android:textColorHint">@color/white</item>
     </style>
 
+
+    <style name="MySpinner2">
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
 </resources>
