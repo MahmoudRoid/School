@@ -1,42 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical"
+        android:weightSum="1">
 
-        <RelativeLayout
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:gravity="center">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="140dp">
 
-            <ImageView
-                android:id="@+id/ivRoundOut_splash"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/circlye_record"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <ImageView
-                android:id="@+id/ivRoundIn_splash"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@id/ivRoundOut_splash"
-                android:layout_alignBottom="@id/ivRoundOut_splash"
-                android:layout_alignLeft="@id/ivRoundOut_splash"
-                android:layout_alignRight="@id/ivRoundOut_splash"
-                android:src="@drawable/keyboard_voice_black"
-                android:background="@drawable/shape_cycle_main"
-                android:layout_margin="30dp" />
-        </RelativeLayout>
+                android:padding="10dp"
+                android:text="@string/sedaye_daneshamooz"
+                android:textSize="@dimen/_14sdp"
+                android:lineSpacingExtra="10dp"
+                android:gravity="right"/>
+
+        </ScrollView>
+
+
+
 
     </LinearLayout>
 
-</android.support.design.widget.CoordinatorLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_for_voice"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/record_around"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/circlye_record"
+           android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            />
+
+        <ImageView
+            android:id="@+id/record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/record_around"
+            android:layout_alignBottom="@id/record_around"
+            android:layout_alignLeft="@id/record_around"
+            android:layout_alignRight="@id/record_around"
+            android:src="@drawable/keyboard_voice_black"
+            android:background="@drawable/shape_cycle_main"
+            android:layout_margin="30dp" />
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:background="#444ccc"
+        android:layout_gravity="bottom"
+        android:visibility="invisible"
+        android:gravity="bottom">
+
+        <RelativeLayout
+            android:id="@+id/play_voice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <ImageView
+                android:id="@+id/sub_play_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_play_on"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/send_voice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <ImageView
+                android:id="@+id/sub_send_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_send"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>
