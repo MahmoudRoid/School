@@ -38,5 +38,8 @@
     <string name="prompt_again_new_password">تکرار پسورد جدید</string>
     <string name="prompt_login">کلمه عبور</string>
     <string name="prompt_username">شناسه کاربری</string>
+    <string name="sedaye_daneshamooz" >
+        موسسه علمی دخترانه بعثت افتخار دارد از این پس با استفاده از درگاه الکترونیکی صدای داشن آموز، پذیرای هرگونه سوال، انتقادات، پیشنهادات و یا قدردانی شما اولیا و دانش آموزان گرامی باشد
+        </string>
 
 </resources>

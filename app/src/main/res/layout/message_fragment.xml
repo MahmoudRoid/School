@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
         <LinearLayout
@@ -89,7 +90,7 @@
                 android:layout_marginLeft="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:layout_gravity="right"
-                android:hint="  آدرس ( اختیاری )"
+                android:hint="  متن ( اجباری )"
                 android:background="@drawable/edittext_rounded"/>
 
             <android.support.v7.widget.AppCompatButton
