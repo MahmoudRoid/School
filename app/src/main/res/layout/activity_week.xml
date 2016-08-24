@@ -136,7 +136,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -147,7 +147,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -158,7 +158,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -169,7 +169,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="دینی"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -180,7 +180,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="علوم"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -191,7 +191,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="ریاضی"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -223,7 +223,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -234,7 +234,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -245,7 +245,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -256,7 +256,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="ورزش"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -267,7 +267,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="مدنی"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -278,7 +278,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="جغرافی"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -309,7 +309,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -320,7 +320,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -331,7 +331,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -342,7 +342,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="املا"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -353,7 +353,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="ریاضی"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -364,7 +364,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="هنر"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -396,7 +396,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -407,7 +407,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -418,7 +418,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -429,7 +429,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="قرآن"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -440,7 +440,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="انگلیسی"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -451,7 +451,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="ادبیات فارسی"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -483,7 +483,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -494,7 +494,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -505,7 +505,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -516,7 +516,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="دینی"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -527,7 +527,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="علوم"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -538,7 +538,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="انشا"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -570,7 +570,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -581,7 +581,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -592,7 +592,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -603,7 +603,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="ریاضی"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -614,7 +614,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="جغرافی"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -625,7 +625,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="تاریخ"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -658,7 +658,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -669,7 +669,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -680,7 +680,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -691,7 +691,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -702,7 +702,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />
@@ -713,7 +713,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/cell_shap"
                         android:padding="5dp"
-                        android:text="TextView"
+                        android:text="-"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:gravity="center"
                         android:layout_margin="2dp" />

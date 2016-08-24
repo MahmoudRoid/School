@@ -1,6 +1,7 @@
 package ir.elegam.school.Fragment;
 
 import android.content.DialogInterface;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +41,8 @@ public class MessageFragment extends Fragment implements  AdapterView.OnItemSele
     @BindView(R.id.send_btn)
     AppCompatButton sendBtn;
     @BindView(R.id.choose_receiver_spinner)
-    AppCompatSpinner chooseReceiverSpinner;
+    Spinner chooseReceiverSpinner;
+    private Typeface San;
 
     public MessageFragment() {
     }
@@ -53,6 +56,7 @@ public class MessageFragment extends Fragment implements  AdapterView.OnItemSele
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.message_fragment, container, false);
+        San = Typeface.createFromAsset(getActivity().getAssets(), "fonts/SansLight.ttf");
         ButterKnife.bind(this, view);
         return view;
     }
@@ -60,6 +64,10 @@ public class MessageFragment extends Fragment implements  AdapterView.OnItemSele
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        nameEdt.setTypeface(San);
+        phoneEdt.setTypeface(San);
+        matnEdt.setTypeface(San);
+        sendBtn.setTypeface(San);
 
         chooseReceiverSpinner.setOnItemSelectedListener(this);
         List<String> spn_item = new ArrayList<String>();

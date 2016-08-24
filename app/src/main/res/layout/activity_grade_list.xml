@@ -13,18 +13,24 @@
         android:id="@+id/btnClass_gradelist"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
-        android:text="نمرات کلاسی"/>
+        android:text="نمرات کلاسی"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_normal_button" />
 
     <Button
         android:id="@+id/btnKarname_gradelist"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
-        android:text="کارنامه تحصیلی"/>
+        android:text="کارنامه تحصیلی"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_normal_button" />
 
     <Button
         android:id="@+id/btnAzmoon_gradelist"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
-        android:text="نمرات آزمون ها"/>
+        android:text="نمرات آزمون ها"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_normal_button" />
 
 </LinearLayout>

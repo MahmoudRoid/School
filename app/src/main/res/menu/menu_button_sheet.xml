@@ -3,22 +3,22 @@
 
     <item
         android:id="@+id/action_aboutus"
-        android:icon="@drawable/settings_power_black"
+        android:icon="@drawable/info_black"
         android:title="@string/menu_aboutus" />
 
     <item
         android:id="@+id/action_guide"
-        android:icon="@drawable/settings_power_black"
+        android:icon="@drawable/live_help_black"
         android:title="@string/menu_guid" />
 
     <item
         android:id="@+id/action_contact_intro"
-        android:icon="@drawable/settings_power_black"
+        android:icon="@drawable/people_black"
         android:title="@string/menu_introduce" />
 
     <item
         android:id="@+id/action_honor"
-        android:icon="@drawable/settings_power_black"
+        android:icon="@drawable/iieftekharat"
         android:title="@string/menu_school_honor" />
 
     <item

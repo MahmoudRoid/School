@@ -73,13 +73,13 @@ public class News_Adapter extends RecyclerView.Adapter<News_Adapter.ViewHolder> 
         Log.i(Variables.Tag, "texts: "+ ItemsList.get(position).OTile + "   "+ ItemsList.get(position).ODate);
 
         if(isStaticImage){
-            RowViewHolder.ivRow.setImageResource(R.mipmap.ic_launcher);
+            RowViewHolder.ivRow.setImageResource(R.drawable.def);
         }else{
             Glide.with(mContext)
                     .load(ItemsList.get(position).OImageUrl)
                     .override(200,200)
-                    .placeholder(R.mipmap.ic_launcher)
-                    .error(R.mipmap.ic_launcher)
+                    .placeholder(R.drawable.def)
+                    .error(R.drawable.def)
                     .into(RowViewHolder.ivRow);
 
         }

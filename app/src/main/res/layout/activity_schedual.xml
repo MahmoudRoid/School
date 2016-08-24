@@ -13,24 +13,32 @@
         android:id="@+id/btnWeek_schedual"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
-        android:text="برنامه هفتگی" />
+        android:text="برنامه هفتگی"
+        android:background="@drawable/shape_normal_button"
+        android:layout_margin="10dp" />
 
     <Button
         android:id="@+id/btnExam_schedual"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
-        android:text="برنامه امتحانات"/>
+        android:text="برنامه امتحانات"
+        android:background="@drawable/shape_normal_button"
+        android:layout_margin="10dp" />
 
     <Button
         android:id="@+id/btnAzmoon_schedual"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
-        android:text="برنامه آزمون ها"/>
+        android:text="برنامه آزمون ها"
+        android:background="@drawable/shape_normal_button"
+        android:layout_margin="10dp" />
 
     <Button
         android:id="@+id/btnMulti_schedual"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
-        android:text="کلاس های فوق برنامه"/>
+        android:text="کلاس های فوق برنامه"
+        android:background="@drawable/shape_normal_button"
+        android:layout_margin="10dp" />
 
 </LinearLayout>

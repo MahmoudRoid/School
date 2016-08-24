@@ -57,19 +57,13 @@
         android:padding="5dp"
         android:layout_margin="5dp">
 
-        <LinearLayout
+        <Button
+            android:id="@+id/btnPay_money"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_normal_button"
+            android:text="پرداخت آنلاین"/>
 
-            <Button
-                android:id="@+id/btnPay_money"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/shape_button_blue_lowopacity"
-                android:text="پرداخت آنلاین"/>
-
-        </LinearLayout>
     </android.support.v7.widget.CardView>
 
 </LinearLayout>

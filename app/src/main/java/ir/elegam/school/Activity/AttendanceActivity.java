@@ -1,6 +1,7 @@
 package ir.elegam.school.Activity;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -39,6 +40,8 @@ public class AttendanceActivity extends AppCompatActivity implements IWebservice
     Button attendanceChooseDate;
 
     PersianCalendar persianCalendar;
+    private Toolbar toolbar;
+    private Typeface San;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,14 +49,7 @@ public class AttendanceActivity extends AppCompatActivity implements IWebservice
         setContentView(R.layout.activity_attendance);
         ButterKnife.bind(this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.back);
-        TextView mTitle = (TextView) toolbar.findViewById(R.id.custom_title);
-        mTitle.setText("حضور و غیاب");
+        define();
 
 
         // call webservice if internet is available
@@ -67,6 +63,18 @@ public class AttendanceActivity extends AppCompatActivity implements IWebservice
             snackbar.show();
         }
 
+    }
+
+    private void define(){
+        San = Typeface.createFromAsset(getAssets(), "fonts/SansLight.ttf");
+        toolbar = (Toolbar) findViewById(R.id.toolbar_attendance);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        attendanceChooseDate.setTypeface(San);
+        TextView txtToolbar = (TextView) findViewById(R.id.txtToolbar_appbar);
+        txtToolbar.setText("حضور و غیاب");
+        txtToolbar.setTypeface(San);
     }
 
     @Override

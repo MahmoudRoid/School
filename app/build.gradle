@@ -39,6 +39,7 @@ dependencies {
     compile 'com.github.satyan:sugar:1.4'
     compile 'com.mohamadamin:persianmaterialdatetimepicker:1.2.1'
     compile 'com.afollestad:easyvideoplayer:0.2.9'
+
 }
 
 repositories {

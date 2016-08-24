@@ -32,7 +32,7 @@ public class ContactSchool extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         txtToolbar = (TextView) findViewById(R.id.txtToolbar_appbar);
-        txtToolbar.setText("مدرسه حاج عبدالله");
+        txtToolbar.setText("اطلاعات مدرسه");
         txtToolbar.setTypeface(San);
 
     }// end define()

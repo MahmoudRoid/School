@@ -4,6 +4,7 @@ import android.app.DownloadManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -41,21 +42,17 @@ public class ArticleActivity extends AppCompatActivity implements IWebservice {
     private RecyclerView.LayoutManager mLayoutManager;
     public ArrayList<Article> nashrieArrayList;
     public int type; // 1 = nomarat azmoonha | 2 = karname |
+    private Toolbar toolbar;
+    private Typeface San;
+    private TextView txtToolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article);
 
         setArtileType();
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.back);
-        TextView mTitle = (TextView) toolbar.findViewById(R.id.custom_title);
-        mTitle.setText(gettitle());
+        define();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.article_fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -63,8 +60,8 @@ public class ArticleActivity extends AppCompatActivity implements IWebservice {
             public void onClick(View view) {
                 if(Internet.isNetworkAvailable(ArticleActivity.this)){
                     // call webservice
-                        GetArticleData getdata=new GetArticleData(ArticleActivity.this,ArticleActivity.this,type);
-                        getdata.execute();
+                        //GetArticleData getdata=new GetArticleData(ArticleActivity.this,ArticleActivity.this,type);
+                        //getdata.execute();
                 }
                 else {
                     Snackbar snackbar = Snackbar
@@ -75,6 +72,18 @@ public class ArticleActivity extends AppCompatActivity implements IWebservice {
         });
         init();
     }
+
+    private void define(){
+        San = Typeface.createFromAsset(getAssets(), "fonts/SansLight.ttf");
+        toolbar = (Toolbar) findViewById(R.id.toolbar_article);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        txtToolbar = (TextView) findViewById(R.id.txtToolbar_appbar);
+        txtToolbar.setText("");
+        txtToolbar.setTypeface(San);
+    }// end define()
 
     private void setArtileType() {
         switch (getIntent().getExtras().getString("what")){
@@ -107,8 +116,8 @@ public class ArticleActivity extends AppCompatActivity implements IWebservice {
                 // dar gheire in soorat check net va dl
                 if(Internet.isNetworkAvailable(ArticleActivity.this)){
                     // call webservice
-                    GetArticleData getdata=new GetArticleData(ArticleActivity.this,ArticleActivity.this,type);
-                    getdata.execute();
+                    /*GetArticleData getdata=new GetArticleData(ArticleActivity.this,ArticleActivity.this,type);
+                    getdata.execute();*/
                 }
                 else {
                     Snackbar snackbar = Snackbar
@@ -134,8 +143,8 @@ public class ArticleActivity extends AppCompatActivity implements IWebservice {
                 // dar gheire in soorat check net va dl
                 if(Internet.isNetworkAvailable(ArticleActivity.this)){
                     // call webservice
-                    GetArticleData getdata=new GetArticleData(ArticleActivity.this,ArticleActivity.this,type);
-                    getdata.execute();
+                    /*GetArticleData getdata=new GetArticleData(ArticleActivity.this,ArticleActivity.this,type);
+                    getdata.execute();*/
                 }
                 else {
                     Snackbar snackbar = Snackbar

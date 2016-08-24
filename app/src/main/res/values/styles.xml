@@ -14,7 +14,7 @@
         <item name="android:textColor">@color/TXTcolor</item>
         <item name="android:textColorSecondary">@color/white</item>
 
-        <item name="android:windowBackground">@color/pri100</item>
+        <item name="android:windowBackground">@color/splashCo</item>
 
         <item name="android:spinnerItemStyle">@style/MySpinner</item>
     </style>
@@ -36,10 +36,10 @@
         <item name="android:textColorHint">@color/white</item>
     </style>
 
-
-    <style name="MySpinner2">
-        <item name="android:gravity">right</item>
-        <item name="android:textColor">#ffffff</item>
+    <style
+        name="ListAppearance" parent="BottomSheet.ListItem.TextAppearance">
+        <item name="android:textColor">@color/Tire</item>
+        <item name="android:textSize">14dp</item>
     </style>
 
 </resources>

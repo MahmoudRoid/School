@@ -1,5 +1,6 @@
 package ir.elegam.school.Activity;
 
+import android.graphics.Typeface;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -19,20 +20,23 @@ public class CriticSuggestionActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private Typeface San;
+    private TextView txtToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_critic_suggestion);
+        define();
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+       /* Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.back);
         TextView mTitle = (TextView) toolbar.findViewById(R.id.custom_title);
-        mTitle.setText("انتقادها و پیشنهادها");
+        mTitle.setText("انتقادها و پیشنهادها");*/
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -61,6 +65,18 @@ public class CriticSuggestionActivity extends AppCompatActivity {
         });
 
     }
+
+    private void define(){
+        San = Typeface.createFromAsset(getAssets(), "fonts/SansLight.ttf");
+        toolbar = (Toolbar) findViewById(R.id.toolbar_criticsuggestion);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        txtToolbar = (TextView) findViewById(R.id.txtToolbar_appbar);
+        txtToolbar.setText("انتقادها و پیشنهادها");
+        txtToolbar.setTypeface(San);
+    }// end define()
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
